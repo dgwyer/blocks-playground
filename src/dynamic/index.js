@@ -12,16 +12,14 @@ const { registerBlockType } = wp.blocks;
 const { Spinner } = wp.components;
 const { withSelect } = wp.data;
 
-registerBlockType(
-    'bpblocks/dynamic',
-    {
+export default registerBlockType( 'bpblocks/dynamic', {
         title: __( 'Example - Dynamic Block', 'bpblocks'),
         description: __( 'A look at how to build a basic dynamic block.', 'bpblocks'),
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },         
-        category: 'widgets',
+        category: 'bpblocks',
         edit: withSelect( select => {
                 return {
                     posts: select( 'core' ).getEntityRecords( 'postType', 'post', { per_page: 3 } )

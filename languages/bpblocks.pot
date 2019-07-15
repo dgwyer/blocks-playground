@@ -92,90 +92,18 @@ msgstr ""
 msgid "Grid Style"
 msgstr ""
 
-#: src/02-data-example/components/DeleteButton.js:12
-#: src/02-data-example/components/DispatchDemo.js:20
-#: src/02-data-example/components/WithComposeDemo.js:19
-msgid "X"
-msgstr ""
-
-#: src/02-data-example/components/SelectDemo.js:13
-#: src/02-data-example/components/SubscribeDemo.js:37
-#: src/02-data-example/components/WithSelectDemo.js:10
-msgid "Block Count:"
-msgstr ""
-
-#: src/02-data-example/index.js:16
-msgid "Demo of select, subscribe, dispatch, withSelect, withDispatch and compose"
-msgstr ""
-
-#: src/02-data-example/index.js:37
-msgid "Data API Example"
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:102
-msgid "Cancel"
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:107
-msgid "Global Setting Saved"
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:116
-msgid "Edit"
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:126
-msgid "Please enter a block settings value in the block settings."
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:133
-msgid "Global Setting: "
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:57
-msgid "Loading"
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:66
-msgid "Block Setting"
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:73
-msgid "Please enter a setting"
-msgstr ""
-
-#: src/03-with-global-settings/edit.js:91
-msgid "Save Setting"
-msgstr ""
-
-#: src/03-with-global-settings/index.js:17
-msgid "With Global Settings"
-msgstr ""
-
-#: src/03-with-global-settings/index.js:18
-msgid "Example block with global block settings"
-msgstr ""
-
-#: src/03-with-global-settings/index.js:26
-msgid "API Key"
-msgstr ""
-
-#: src/03-with-global-settings/index.js:31
-msgid "Show block global settings"
-msgstr ""
-
-#: src/dynamic/index.js:18
+#: src/dynamic/index.js:16
 msgid "Example - Dynamic Block"
 msgstr ""
 
-#: src/dynamic/index.js:19
+#: src/dynamic/index.js:17
 msgid "A look at how to build a basic dynamic block."
 msgstr ""
 
-#: src/dynamic/index.js:34
+#: src/dynamic/index.js:32
 msgid "Loading Posts"
 msgstr ""
 
-#: src/dynamic/index.js:39
+#: src/dynamic/index.js:37
 msgid "No Posts"
 msgstr ""
