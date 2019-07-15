@@ -11,7 +11,7 @@
 5. The Styles API
 6. Examples of Advanced Blocks
 
-## biExample File Instructions
+## Example File Instructions
 
 1. Download or fork the course repo
 2. Install themes and plugins as needed
