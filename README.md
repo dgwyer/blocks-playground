@@ -1,4 +1,4 @@
-#g Advanced Gutenberg Block Development Course for WordPress
+# Advanced Gutenberg Block Development Course for WordPress
 
 [View the course on https://javascriptforwp.com/](https://javascriptforwp.com/product/advanced-gutenberg-development/)
 
@@ -11,7 +11,7 @@
 5. The Styles API
 6. Examples of Advanced Blocks
 
-## Example File Instructionsf
+## Example File Instructions
 
 1. Download or fork the course repo
 2. Install themes and plugins as needed
