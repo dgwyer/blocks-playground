@@ -23,19 +23,19 @@ const {
  * Register example block
  */
 export default registerBlockType(
-    'jsforwpblocks/media-upload',
+    'bpblocks/media-upload',
     {
-        title: __( 'Example - Media Upload Button', 'jsforwpblocks' ),
-        description: __( 'An example of how to use the MediaUpload component.', 'jsforwpblocks'),
+        title: __( 'Example - Media Upload Button', 'bpblocks' ),
+        description: __( 'An example of how to use the MediaUpload component.', 'bpblocks'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icons.upload,
         },         
         keywords: [
-            __( 'Image', 'jsforwpblocks' ),
-            __( 'MediaUpload', 'jsforwpblocks' ),
-            __( 'Message', 'jsforwpblocks' ),
+            __( 'Image', 'bpblocks' ),
+            __( 'MediaUpload', 'bpblocks' ),
+            __( 'Message', 'bpblocks' ),
         ],
         attributes: {
             imgURL: {
@@ -86,7 +86,7 @@ export default registerBlockType(
                                     onClick={ open }
                                 >
                                     { icons.upload }
-                                    { __( ' Upload Image', 'jsforwpblocks' ) }
+                                    { __( ' Upload Image', 'bpblocks' ) }
                                 </Button>
                             ) }
                         >

@@ -16,25 +16,25 @@ const { TextControl, PanelBody } = wp.components;
  * Register example block
  */
 export default registerBlockType(
-    'jsforwpblocks/meta-box',
+    'bpblocks/meta-box',
     {
-        title: __( 'Example - Meta Box', 'jsforwpblocks' ),
-        description: __( 'An example of how to build a block with a meta box field.', 'jsforwpblocks'),
+        title: __( 'Example - Meta Box', 'bpblocks' ),
+        description: __( 'An example of how to build a block with a meta box field.', 'bpblocks'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },         
         keywords: [
-            __( 'Meta', 'jsforwpblocks' ),
-            __( 'Custom field', 'jsforwpblocks' ),
-            __( 'Box', 'jsforwpblocks' ),
+            __( 'Meta', 'bpblocks' ),
+            __( 'Custom field', 'bpblocks' ),
+            __( 'Box', 'bpblocks' ),
         ],
         attributes: {
             text: {
                 type: 'string',
                 source: 'meta',
-                meta: 'jsforwpblocks_gb_metabox',
+                meta: 'bpblocks_gb_metabox',
             },
         },
         edit: props => {
@@ -43,20 +43,20 @@ export default registerBlockType(
                 <InspectorControls>
                     <PanelBody>
                         <TextControl
-                            label={ __( 'Meta box', 'jsforwpblocks' ) }
+                            label={ __( 'Meta box', 'bpblocks' ) }
                             value={ text }
                             onChange={ text => setAttributes( { text } ) }
                         />
                     </PanelBody>
                 </InspectorControls>,                
                 <div className={ className } >
-                    <p>{ __( 'Check the meta', 'jsforwpblocks' ) }</p>
+                    <p>{ __( 'Check the meta', 'bpblocks' ) }</p>
                 </div>
             ];
         },
         save: props => {
             return (
-                <p>{ __( 'Check the meta', 'jsforwpblocks' ) }</p>
+                <p>{ __( 'Check the meta', 'bpblocks' ) }</p>
             );
         },
     },

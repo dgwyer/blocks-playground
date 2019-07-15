@@ -49,26 +49,26 @@ export default class Inspector extends Component {
     return (
       <InspectorControls>
         <PanelBody
-          title={__("Panel Body Title", "jsforwpblocks")}
+          title={__("Panel Body Title", "bpblocks")}
           initialOpen={false}
         >
           <PanelRow>
-            <p>{__("Panel Body Copy", "jsforwpblocks")}</p>
+            <p>{__("Panel Body Copy", "bpblocks")}</p>
           </PanelRow>
         </PanelBody>
 
         <PanelBody>
           <CheckboxControl
-            heading={__("Checkbox Control", "jsforwpblocks")}
-            label={__("Check here", "jsforwpblocks")}
-            help={__("Checkbox control help text", "jsforwpblocks")}
+            heading={__("Checkbox Control", "bpblocks")}
+            label={__("Check here", "bpblocks")}
+            help={__("Checkbox control help text", "bpblocks")}
             checked={checkboxControl}
             onChange={checkboxControl => setAttributes({ checkboxControl })}
           />
         </PanelBody>
 
         <PanelColorSettings
-          title={__("Color Settings", "jsforwpblocks")}
+          title={__("Color Settings", "bpblocks")}
           colorSettings={[
             {
               value: colorPaletteControl,
@@ -81,7 +81,7 @@ export default class Inspector extends Component {
         />
 
         <PanelBody>
-          <h3>{__("Color Settings 2", "jsforwpblocks")}</h3>
+          <h3>{__("Color Settings 2", "bpblocks")}</h3>
           <ColorPalette
             value={colorPaletteControl2}
             onChange={colorPaletteControl2 => {
@@ -100,7 +100,7 @@ export default class Inspector extends Component {
         </PanelBody>
         <PanelBody>
           <RadioControl
-            label={__("Radio Control", "jsforwpblocks")}
+            label={__("Radio Control", "bpblocks")}
             selected={radioControl}
             options={[
               { label: "Author", value: "a" },
@@ -114,7 +114,7 @@ export default class Inspector extends Component {
           <RangeControl
             beforeIcon="arrow-left-alt2"
             afterIcon="arrow-right-alt2"
-            label={__("Range Control", "jsforwpblocks")}
+            label={__("Range Control", "bpblocks")}
             value={rangeControl}
             onChange={rangeControl => setAttributes({ rangeControl })}
             min={1}
@@ -124,8 +124,8 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <TextControl
-            label={__("Text Control", "jsforwpblocks")}
-            help={__("Text control help text", "jsforwpblocks")}
+            label={__("Text Control", "bpblocks")}
+            help={__("Text control help text", "bpblocks")}
             value={textControl}
             onChange={textControl => setAttributes({ textControl })}
           />
@@ -133,8 +133,8 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <TextareaControl
-            label={__("Text Area Control", "jsforwpblocks")}
-            help={__("Text area control help text", "jsforwpblocks")}
+            label={__("Text Area Control", "bpblocks")}
+            help={__("Text area control help text", "bpblocks")}
             value={textareaControl}
             onChange={textareaControl => setAttributes({ textareaControl })}
           />
@@ -142,7 +142,7 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <ToggleControl
-            label={__("Toggle Control", "jsforwpblocks")}
+            label={__("Toggle Control", "bpblocks")}
             checked={toggleControl}
             onChange={toggleControl => setAttributes({ toggleControl })}
           />
@@ -150,12 +150,12 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <SelectControl
-            label={__("Select Control", "jsforwpblocks")}
+            label={__("Select Control", "bpblocks")}
             value={selectControl}
             options={[
-              { value: "a", label: __("Option A", "jsforwpblocks") },
-              { value: "b", label: __("Option B", "jsforwpblocks") },
-              { value: "c", label: __("Option C", "jsforwpblocks") }
+              { value: "a", label: __("Option A", "bpblocks") },
+              { value: "b", label: __("Option B", "bpblocks") },
+              { value: "c", label: __("Option C", "bpblocks") }
             ]}
             onChange={selectControl => setAttributes({ selectControl })}
           />

@@ -15,29 +15,29 @@ const { registerBlockType } = wp.blocks;
  * Register block
  */
 export default registerBlockType(
-    'jsforwpblocks/static',
+    'bpblocks/static',
     {
-        title: __( 'Example - Static Block', 'jsforwpblocks' ),
-        description: __( 'Demonstration of how to make a static call to action block.', 'jsforwpblocks' ),
+        title: __( 'Example - Static Block', 'bpblocks' ),
+        description: __( 'Demonstration of how to make a static call to action block.', 'bpblocks' ),
         category: 'common',
         icon: {
           background: 'rgba(254, 243, 224, 0.52)',
           src: icon,
         },        
         keywords: [
-            __( 'Banner', 'jsforwpblocks' ),
-            __( 'CTA', 'jsforwpblocks' ),
-            __( 'Shout Out', 'jsforwpblocks' ),
+            __( 'Banner', 'bpblocks' ),
+            __( 'CTA', 'bpblocks' ),
+            __( 'Shout Out', 'bpblocks' ),
         ],
         edit: props => {
           const { className, isSelected } = props;
           return (
             <div className={ className }>
-              <h2>{ __( 'Static Call to Action', 'jsforwpblocks' ) }</h2>
-              <p>{ __( 'This is really important!', 'jsforwpblocks' ) }</p>
+              <h2>{ __( 'Static Call to Action', 'bpblocks' ) }</h2>
+              <p>{ __( 'This is really important!', 'bpblocks' ) }</p>
               {
                 isSelected && (
-                  <p className="sorry warning">{ __( '✋ Sorry! You cannot edit this block ✋', 'jsforwpblocks' ) }</p>
+                  <p className="sorry warning">{ __( '✋ Sorry! You cannot edit this block ✋', 'bpblocks' ) }</p>
                 )
               }
             </div>
@@ -46,8 +46,8 @@ export default registerBlockType(
         save: props => {
           return (
             <div>
-              <h2>{ __( 'Call to Action', 'jsforwpblocks' ) }</h2>
-              <p>{ __( 'This is really important!', 'jsforwpblocks' ) }</p>
+              <h2>{ __( 'Call to Action', 'bpblocks' ) }</h2>
+              <p>{ __( 'This is really important!', 'bpblocks' ) }</p>
             </div>
           );
         },

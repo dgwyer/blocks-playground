@@ -33,19 +33,19 @@ const {
   * Register block
  */
 export default registerBlockType(
-    'jsforwpblocks/inspector-controls',
+    'bpblocks/inspector-controls',
     {
-        title: __( 'Example - Inspector Controls', 'jsforwpblocks' ),
-        description: __( 'An example of how to use the Inspector component for a block.', 'jsforwpblocks'),
+        title: __( 'Example - Inspector Controls', 'bpblocks' ),
+        description: __( 'An example of how to use the Inspector component for a block.', 'bpblocks'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icons.sidebar,
         },                 
         keywords: [
-            __( 'Button', 'jsforwpblocks' ),
-            __( 'Settings', 'jsforwpblocks' ),
-            __( 'Controls', 'jsforwpblocks' ),
+            __( 'Button', 'bpblocks' ),
+            __( 'Settings', 'bpblocks' ),
+            __( 'Controls', 'bpblocks' ),
         ],
         attributes: {
             textAlignment: {
@@ -78,17 +78,17 @@ export default registerBlockType(
             return [
                 <InspectorControls>
                     <PanelBody
-                        title={ __( 'High Contrast', 'jsforwpblocks' ) }
+                        title={ __( 'High Contrast', 'bpblocks' ) }
                     >
                         <PanelRow>
                             <label
                                 htmlFor="high-contrast-form-toggle"
                             >
-                                { __( 'High Contrast', 'jsforwpblocks' ) }
+                                { __( 'High Contrast', 'bpblocks' ) }
                             </label>
                             <FormToggle
                                 id="high-contrast-form-toggle"
-                                label={ __( 'High Contrast', 'jsforwpblocks' ) }
+                                label={ __( 'High Contrast', 'bpblocks' ) }
                                 checked={ highContrast }
                                 onChange={ toggleHighContrast }
                             />
@@ -101,7 +101,7 @@ export default registerBlockType(
                         onChange={ ( textAlignment ) => props.setAttributes( { textAlignment } ) }
                     />
                     <Toolbar>
-                        <Tooltip text={ __( 'High Contrast', 'jsforwpblocks' )  }>
+                        <Tooltip text={ __( 'High Contrast', 'bpblocks' )  }>
                             <Button
                                 className={ classnames(
                                     'components-icon-button',

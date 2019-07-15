@@ -163,3 +163,19 @@ msgstr ""
 #: src/03-with-global-settings/index.js:31
 msgid "Show block global settings"
 msgstr ""
+
+#: src/dynamic/index.js:18
+msgid "Example - Dynamic Block"
+msgstr ""
+
+#: src/dynamic/index.js:19
+msgid "A look at how to build a basic dynamic block."
+msgstr ""
+
+#: src/dynamic/index.js:34
+msgid "Loading Posts"
+msgstr ""
+
+#: src/dynamic/index.js:39
+msgid "No Posts"
+msgstr ""

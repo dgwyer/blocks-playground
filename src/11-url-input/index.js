@@ -25,19 +25,19 @@ const {
  * Register example block
  */
 export default registerBlockType(
-    'jsforwpblocks/url-input',
+    'bpblocks/url-input',
     {
-        title: __( 'Example - URL Input', 'jsforwpblocks' ),
-        description: __( 'An example of how to use the URLInput component.', 'jsforwpblocks'),
+        title: __( 'Example - URL Input', 'bpblocks' ),
+        description: __( 'An example of how to use the URLInput component.', 'bpblocks'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },         
         keywords: [
-            __( 'Link', 'jsforwpblocks' ),
-            __( 'Post', 'jsforwpblocks' ),
-            __( 'Search', 'jsforwpblocks' ),
+            __( 'Link', 'bpblocks' ),
+            __( 'Post', 'bpblocks' ),
+            __( 'Search', 'bpblocks' ),
         ],
         attributes: {
             text: {
@@ -62,11 +62,11 @@ export default registerBlockType(
                         <Fragment>
                             <TextControl
                                 id="example-input-field"
-                                label={ __( 'Link Text', 'jsforwpblocks' ) }
+                                label={ __( 'Link Text', 'bpblocks' ) }
                                 value={ text }
                                 onChange={ text => setAttributes( { text } ) }
                             />
-                            <p>{ __( 'Link URL', 'jsforwpblocks' ) }</p>
+                            <p>{ __( 'Link URL', 'bpblocks' ) }</p>
                             <form
                                 className="blocks-format-toolbar__link-modal-line blocks-format-toolbar__link-modal-line"
                                 onSubmit={ event => event.preventDefault() }
@@ -81,7 +81,7 @@ export default registerBlockType(
                                 />
                                 <IconButton
                                     icon="editor-break"
-                                    label={ __( 'Apply', 'jsforwpblocks' ) }
+                                    label={ __( 'Apply', 'bpblocks' ) }
                                     type="submit"
                                 />
                             </form>
@@ -91,7 +91,7 @@ export default registerBlockType(
 
                         <p>
                             <a href={ url }>
-                                { text || __( 'Edit link', 'jsforwpblocks' ) }
+                                { text || __( 'Edit link', 'bpblocks' ) }
                             </a>
                         </p>
 

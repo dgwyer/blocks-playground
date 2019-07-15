@@ -13,10 +13,10 @@ const { Spinner } = wp.components;
 const { withSelect } = wp.data;
 
 registerBlockType(
-    'jsforwpblocks/dynamic',
+    'bpblocks/dynamic',
     {
-        title: __( 'Example - Dynamic Block', 'jsforwpblocks'),
-        description: __( 'A look at how to build a basic dynamic block.', 'jsforwpblocks'),
+        title: __( 'Example - Dynamic Block', 'bpblocks'),
+        description: __( 'A look at how to build a basic dynamic block.', 'bpblocks'),
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
@@ -31,12 +31,12 @@ registerBlockType(
                     return (
                         <p className={className} >
                             <Spinner />
-                            { __( 'Loading Posts', 'jsforwpblocks' ) }
+                            { __( 'Loading Posts', 'bpblocks' ) }
                         </p>
                     );
                 }
                 if ( 0 === posts.length ) {
-                    return <p>{ __( 'No Posts', 'jsforwpblocks' ) }</p>;
+                    return <p>{ __( 'No Posts', 'bpblocks' ) }</p>;
                 }
                 return (
                     <ul className={ className }>

@@ -15,19 +15,19 @@ const { RichText } = wp.editor;
  * Register block
  */
 export default registerBlockType(
-    'jsforwpblocks/richtext',
+    'bpblocks/richtext',
     {
-        title: __( 'Example - RichText', 'jsforwpblocks' ),
-        description: __( 'How to use the RichText component for building your own editable blocks.', 'jsforwpblocks' ),
+        title: __( 'Example - RichText', 'bpblocks' ),
+        description: __( 'How to use the RichText component for building your own editable blocks.', 'bpblocks' ),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },   
         keywords: [
-            __( 'Banner', 'jsforwpblocks' ),
-            __( 'Call to Action', 'jsforwpblocks' ),
-            __( 'Message', 'jsforwpblocks' ),
+            __( 'Banner', 'bpblocks' ),
+            __( 'Call to Action', 'bpblocks' ),
+            __( 'Message', 'bpblocks' ),
         ],
         attributes: {
             message: {
@@ -41,11 +41,11 @@ export default registerBlockType(
             const onChangeMessage = message => { setAttributes( { message } ) };
             return (
                 <div className={ className }>
-                    <h2>{ __( 'Call to Action', 'jsforwpblocks' ) }</h2>
+                    <h2>{ __( 'Call to Action', 'bpblocks' ) }</h2>
                     <RichText
                         tagName="div"
                         multiline="p"
-                        placeholder={ __( 'Add your custom message', 'jsforwpblocks' ) }
+                        placeholder={ __( 'Add your custom message', 'bpblocks' ) }
                   		onChange={ onChangeMessage }
                   		value={ message }
               		/>
@@ -56,7 +56,7 @@ export default registerBlockType(
             const { attributes: { message } } = props;
             return (
                 <div>
-                    <h2>{ __( 'Call to Action', 'jsforwpblocks' ) }</h2>
+                    <h2>{ __( 'Call to Action', 'bpblocks' ) }</h2>
                     <div class="message-body">
                         { message }
                     </div>

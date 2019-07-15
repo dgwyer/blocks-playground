@@ -31,11 +31,11 @@ function getSettings(attributes) {
 /**
  * Register inspector control example block
  */
-export default registerBlockType("jsforwpblocks/inspector-control-fields", {
-  title: __("Example - Inspector Fields", "jsforwpblocks"),
+export default registerBlockType("bpblocks/inspector-control-fields", {
+  title: __("Example - Inspector Fields", "bpblocks"),
   description: __(
     "An example of how to use form fields in the Inspector element.",
-    "jsforwpblocks"
+    "bpblocks"
   ),
   category: "common",
   icon: {
@@ -43,9 +43,9 @@ export default registerBlockType("jsforwpblocks/inspector-control-fields", {
     src: icon
   },
   keywords: [
-    __("Palette", "jsforwpblocks"),
-    __("Settings", "jsforwpblocks"),
-    __("Scheme", "jsforwpblocks")
+    __("Palette", "bpblocks"),
+    __("Settings", "bpblocks"),
+    __("Scheme", "bpblocks")
   ],
   attributes,
   getEditWrapperProps(attributes) {
