@@ -1,4 +1,4 @@
-# Advanced Gutenberg Block Development Course for WordPress
+#g Advanced Gutenberg Block Development Course for WordPress
 
 [View the course on https://javascriptforwp.com/](https://javascriptforwp.com/product/advanced-gutenberg-development/)
 
