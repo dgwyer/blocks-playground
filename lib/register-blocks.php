@@ -15,14 +15,14 @@ function register_blocks() {
 
     // List all of the blocks for your plugin
     $blocks = [
-        "jsforwpadvblocks/gallery",
-        "jsforwpadvblocks/data-example",
-        "jsforwpadvblocks/gallery",
+        "bpblocks/gallery",
+        "bpblocks/data-example",
+        "bpblocks/gallery",
     ];
 
     // Register each block with same CSS and JS
     foreach( $blocks as $block ) {
-        if( "jsforwpadvblocks/gallery" === $block ) {            
+        if( "bpblocks/gallery" === $block ) {            
             register_block_type( $block, [
                 'editor_script' => 'jsforwp-adv-gb-editor-js',
                 'editor_style'  => 'jsforwp-adv-gb-editor-css',

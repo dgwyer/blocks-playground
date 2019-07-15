@@ -47,7 +47,7 @@ export const coreBlocks = () => {
   // // Not sure how to get working for core blocks
   // console.log(
   //   "getBlockSupport",
-  //   select("core/blocks").getBlockSupport("jsforwpadvblocks/gallery", "align")
+  //   select("core/blocks").getBlockSupport("bpblocks/gallery", "align")
   // );
   // console.log("getBlockType", select("core/blocks").getBlockType("core/quote"));
   // console.log("getBlockTypes", select("core/blocks").getBlockTypes());
@@ -71,7 +71,7 @@ export const coreBlocks = () => {
   // // How to get working for core blocks
   // console.log(
   //   "hasBlockSupport",
-  //   select("core/blocks").hasBlockSupport("jsforwpadvblocks/gallery", "align")
+  //   select("core/blocks").hasBlockSupport("bpblocks/gallery", "align")
   // );
   // console.log(
   //   "hasChildBlocks",

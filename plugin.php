@@ -1,19 +1,12 @@
 <?php
-/**
- * Main plugin file
- *
- * @package     Adv_Gutenberg_Courses\Example_Blocks
- * @author      Zac Gordon (@zgordon)
- * @license     GPL2+
- *
- * @wordpress-plugin
- * Plugin Name: Gutenberg - Advanced Examples
- * Plugin URI:  https://javascriptforwp.com/
- * Description: A plugin containing advanced examples for developers.  From <a href="https://javascriptforwp.com/product/advanced-gutenberg-development/">Zac Gordon's Advanced Gutenberg Development Course</a>.
+/*
+ * Plugin Name: Boilerplate Blocks
+ * Plugin URI:  https://wpgoplugins.com/
+ * Description: A small collection of experimental boilerplate blocks.
  * Version:     1.0.0
- * Author:      Zac Gordon
- * Author URI:  https://twitter.com/zgordon
- * Text Domain: jsforwpadvblocks
+ * Author:      David Gwyer
+ * Author URI:  https://twitter.com/dgwyer
+ * Text Domain: bpblocks
  * Domain Path: /languages
  * License:     GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html

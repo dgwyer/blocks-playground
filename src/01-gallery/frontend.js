@@ -3,7 +3,7 @@ const { render } = wp.element;
 import FrontendGallery from "./components/FrontendGallery";
 
 const galleries = document.querySelectorAll(
-  ".wp-block-jsforwpadvblocks-gallery"
+  ".wp-block-bpblocks-gallery"
 );
 
 galleries.forEach((gallery, index) => {

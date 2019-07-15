@@ -11,12 +11,12 @@ function extendWithRegisterBlockType(settings, name) {
   // Check for block type
   if ("core/code" === name) {
     // Change the block title
-    settings.title = __("Code Snippet", "jsforwpadvblocks");
+    settings.title = __("Code Snippet", "bpblocks");
 
     // Change the block description
     settings.description = __(
       "Use for maximum codiness 💃",
-      "jsforwpadvblocks"
+      "bpblocks"
     );
 
     // Change block category
@@ -27,9 +27,9 @@ function extendWithRegisterBlockType(settings, name) {
 
     // Change keywords
     if (settings.keywords) {
-      settings.keywords.push(__("💻", "jsforwpadvblocks"));
+      settings.keywords.push(__("💻", "bpblocks"));
     } else {
-      settings.keywords = [__("💻", "jsforwpadvblocks")];
+      settings.keywords = [__("💻", "bpblocks")];
     }
 
     // Change supports

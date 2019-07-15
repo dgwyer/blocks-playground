@@ -31,15 +31,15 @@ const {
  * Register block
  */
 
-export default registerBlockType("jsforwpadvblocks/gallery", {
-  title: __("Gallery", "jsforwpadvblocks"),
-  description: __("A demo custom gallery block", "jsforwpadvblocks"),
-  category: "jsforwpadvblocks",
+export default registerBlockType("bpblocks/gallery", {
+  title: __("Gallery", "bpblocks"),
+  description: __("A demo custom gallery block", "bpblocks"),
+  category: "bpblocks",
   icon,
   keywords: [
-    __("Masonry", "jsforwpadvblocks"),
-    __("Images Media", "jsforwpadvblocks"),
-    __("Lightbox", "jsforwpadvblocks")
+    __("Masonry", "bpblocks"),
+    __("Images Media", "bpblocks"),
+    __("Lightbox", "bpblocks")
   ],
   attributes: {
     images: {
@@ -84,12 +84,12 @@ export default registerBlockType("jsforwpadvblocks/gallery", {
       <Fragment>
         <InspectorControls>
           <PanelBody
-            title={__("Gallery Settings", "jsforwpadvblocks")}
+            title={__("Gallery Settings", "bpblocks")}
             initialOpen={true}
           >
             <PanelRow>
               <RadioControl
-                label={__("Grid Style", "jsforwpadvblocks")}
+                label={__("Grid Style", "bpblocks")}
                 selected={direction}
                 options={[
                   { label: "Rows", value: "row" },
@@ -100,7 +100,7 @@ export default registerBlockType("jsforwpadvblocks/gallery", {
             </PanelRow>
             <PanelRow>
               <ToggleControl
-                label={__("Enable / disable lightbox", "jsforwpadvblocks")}
+                label={__("Enable / disable lightbox", "bpblocks")}
                 checked={isLightboxEnabled}
                 onChange={isLightboxEnabled =>
                   setAttributes({ isLightboxEnabled })
@@ -121,7 +121,7 @@ export default registerBlockType("jsforwpadvblocks/gallery", {
                 render={({ open }) => (
                   <IconButton
                     className="components-toolbar__control"
-                    label={__("Edit Gallery", "jsforwpadvblocks")}
+                    label={__("Edit Gallery", "bpblocks")}
                     icon="edit"
                     onClick={open}
                   />
@@ -135,10 +135,10 @@ export default registerBlockType("jsforwpadvblocks/gallery", {
             <MediaPlaceholder
               icon={icon}
               labels={{
-                title: __("Gallery", "jsforwpadvblocks"),
+                title: __("Gallery", "bpblocks"),
                 instructions: __(
                   "Drag images, upload new ones or select files from your library",
-                  "jsforwpadvblocks"
+                  "bpblocks"
                 )
               }}
               accept="images/*"

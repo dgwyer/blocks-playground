@@ -9,7 +9,7 @@ const DeleteButton = ({ clientId, removeBlock }) => (
       removeBlock(clientId);
     }}
   >
-    {__("X", "jsforwpadvblocks")}
+    {__("X", "bpblocks")}
   </Button>
 );
 

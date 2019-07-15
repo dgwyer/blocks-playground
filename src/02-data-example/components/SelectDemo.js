@@ -10,7 +10,7 @@ const SelectDemo = props => {
         <code>{"select()"}</code>
       </pre>
       <p>
-        {__("Block Count:", "jsforwpadvblocks")} {blockCount}
+        {__("Block Count:", "bpblocks")} {blockCount}
       </p>
     </div>
   );

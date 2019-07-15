@@ -14,20 +14,20 @@ const ResetControls = ({
   return (
     <Fragment>
       <Button isLink isDestructive onClick={() => setState({ isOpen: true })}>
-        {__("Reset Layout", "jsforwpadvblocks")}
+        {__("Reset Layout", "bpblocks")}
       </Button>
       {isOpen && (
         <Modal
           className="layout-switcher-reset"
-          title={__("Warning!", "jsforwpadvblocks")}
+          title={__("Warning!", "bpblocks")}
           onRequestClose={() => setState({ isOpen: false })}
         >
           <p>
-            {__("This action will remove all blocks", "jsforwpadvblocks")}
+            {__("This action will remove all blocks", "bpblocks")}
             <strong>
               {__(
                 "This can be undone before leaving the page with the Undo option.",
-                "jsforwpadvblocks"
+                "bpblocks"
               )}
             </strong>
           </p>
@@ -40,7 +40,7 @@ const ResetControls = ({
                 setState({ isOpen: false });
               }}
             >
-              {__("Reset Layout", "jsforwpadvblocks")}
+              {__("Reset Layout", "bpblocks")}
             </Button>
           </p>
         </Modal>

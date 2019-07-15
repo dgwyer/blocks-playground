@@ -54,7 +54,7 @@ export default class Edit extends Component {
     if (this.state.isLoading) {
       return (
         <p>
-          <Spinner /> {__("Loading", "jsforwpadvblocks")}
+          <Spinner /> {__("Loading", "bpblocks")}
         </p>
       );
     }
@@ -63,14 +63,14 @@ export default class Edit extends Component {
       <Fragment>
         <InspectorControls>
           <PanelBody
-            title={__("Block Setting", "jsforwpadvblocks")}
+            title={__("Block Setting", "bpblocks")}
             initialOpen
           >
             <PanelRow>
               {this.state.isEditing || this.state.blockSetting === "" ? (
                 <p>
                   <TextControl
-                    label={__("Please enter a setting", "jsforwpadvblocks")}
+                    label={__("Please enter a setting", "bpblocks")}
                     value={this.state.blockSetting}
                     onChange={blockSetting => {
                       if (!this.state.isSaving) {
@@ -88,7 +88,7 @@ export default class Edit extends Component {
                       this.updateSetting();
                     }}
                   >
-                    {__("Save Setting", "jsforwpadvblocks")}
+                    {__("Save Setting", "bpblocks")}
                   </Button>{" "}
                   <Button
                     isDefault
@@ -99,12 +99,12 @@ export default class Edit extends Component {
                       this.setState({ blockSetting });
                     }}
                   >
-                    {__("Cancel", "jsforwpadvblocks")}
+                    {__("Cancel", "bpblocks")}
                   </Button>
                 </p>
               ) : (
                 <Fragment>
-                  <p>{__("Global Setting Saved", "jsforwpadvblocks")}</p>
+                  <p>{__("Global Setting Saved", "bpblocks")}</p>
                   <Button
                     isDefault
                     onClick={() => {
@@ -113,7 +113,7 @@ export default class Edit extends Component {
                       });
                     }}
                   >
-                    {__("Edit", "jsforwpadvblocks")}
+                    {__("Edit", "bpblocks")}
                   </Button>
                 </Fragment>
               )}
@@ -125,12 +125,12 @@ export default class Edit extends Component {
             <p>
               {__(
                 "Please enter a block settings value in the block settings.",
-                "jsforwpadvblocks"
+                "bpblocks"
               )}
             </p>
           ) : (
             <p>
-              {__("Global Setting: ", "jsforwpadvblocks")}
+              {__("Global Setting: ", "bpblocks")}
               {this.state.blockSetting}
             </p>
           )}

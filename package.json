@@ -1,8 +1,8 @@
 {
-  "name": "jsforwp-blocks",
+  "name": "boilerplate-blocks",
   "version": "3.0.0",
   "license": "MIT",
-  "main": "blocks/index.js",
+  "main": "src/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/zgordon/advanced-gutenberg-course.git"

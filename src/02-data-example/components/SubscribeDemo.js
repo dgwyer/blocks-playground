@@ -34,7 +34,7 @@ export default class SubscribeDemo extends Component {
           <code>{"subscribe(() => {})"}</code>
         </pre>
         <p>
-          {__("Block Count:", "jsforwpadvblocks")} {this.state.blockCount}
+          {__("Block Count:", "bpblocks")} {this.state.blockCount}
         </p>
       </div>
     );

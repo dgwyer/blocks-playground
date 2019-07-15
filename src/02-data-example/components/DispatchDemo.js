@@ -17,7 +17,7 @@ const DispatchDemo = ({ blocks }) => (
               dispatch("core/editor").removeBlock(block.clientId);
             }}
           >
-            {__("X", "jsforwpadvblocks")}
+            {__("X", "bpblocks")}
           </Button>
         </li>
       ))}
