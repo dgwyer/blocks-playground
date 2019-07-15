@@ -3531,7 +3531,7 @@ var withSelect = wp.data.withSelect;
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType('bpblocks/dynamic', {
-    title: __('Example - Dynamic Block', 'bpblocks'),
+    title: __('Some Example - Dynamic Block', 'bpblocks'),
     description: __('A look at how to build a basic dynamic block.', 'bpblocks'),
     icon: {
         background: 'rgba(254, 243, 224, 0.52)',

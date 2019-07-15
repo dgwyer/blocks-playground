@@ -13,7 +13,7 @@ const { Spinner } = wp.components;
 const { withSelect } = wp.data;
 
 export default registerBlockType( 'bpblocks/dynamic', {
-        title: __( 'Example - Dynamic Block', 'bpblocks'),
+        title: __( 'Some Example - Dynamic Block', 'bpblocks'),
         description: __( 'A look at how to build a basic dynamic block.', 'bpblocks'),
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',

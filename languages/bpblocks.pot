@@ -93,7 +93,7 @@ msgid "Grid Style"
 msgstr ""
 
 #: src/dynamic/index.js:16
-msgid "Example - Dynamic Block"
+msgid "Some Example - Dynamic Block"
 msgstr ""
 
 #: src/dynamic/index.js:17
