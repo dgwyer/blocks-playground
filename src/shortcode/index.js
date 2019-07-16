@@ -12,9 +12,9 @@ const { registerBlockType } = wp.blocks;
 const { Spinner } = wp.components;
 const { withSelect } = wp.data;
 
-export default registerBlockType( 'blocks-playground/dynamic', {
-        title: __( 'Some Example - Dynamic Block', 'blocks-playground'),
-        description: __( 'A look at how to build a basic dynamic block.', 'blocks-playground'),
+export default registerBlockType( 'blocks-playground/shortcode', {
+        title: __( 'Shortcode Example #1', 'blocks-playground'),
+        description: __( 'Simple shortcode example.', 'blocks-playground'),
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,

@@ -15,6 +15,18 @@
 //  Exit if accessed directly.
 defined('ABSPATH') || exit;
 
+// @todo delete these when dependencies have been deleted
+function _get_plugin_directory() {
+	return __DIR__;
+}
+function _get_plugin_url() {
+	static $plugin_url;
+	if ( empty( $plugin_url ) ) {
+		$plugin_url = plugins_url( null, __FILE__ );
+	}
+	return $plugin_url;
+}
+
 class WPGO_Blocks_Playground {
 	
 	protected $module_roots;
@@ -24,19 +36,6 @@ class WPGO_Blocks_Playground {
 
 		$this->module_roots = $module_roots;
 		$this->bootstrap();
-
-		// Add custom block category
-		add_filter( 'block_categories', function( $categories, $post ) {
-			return array_merge(
-				$categories,
-				[
-					[
-						'slug' => 'blocks-playground',
-						'title' => __( 'Blocks Playground', 'blocks-playground' ),
-					],
-				]
-			);
-		}, 10, 2 );
 	}
 
 	/* Bootstrap plugin. */
@@ -64,4 +63,4 @@ $module_roots = array(
 	'uri' => plugins_url( '', __FILE__ ),
 	'file' => __FILE__
 );
-new WPGO_Blocks_Playground( $module_roots );	
+new WPGO_Blocks_Playground( $module_roots );

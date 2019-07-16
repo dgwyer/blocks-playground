@@ -19,26 +19,34 @@ class WPGO_Blocks_Playground_BootStrap {
 
 		$root = $this->module_roots['dir'];
 
+ 		// Test CPTs needed for blocks
+		require_once( $root . 'classes/cpt.php' );
+		new WPGO_Blocks_Playground_CPT($this->module_roots);
+
+ 		// bootstrap block PHP
+		require_once( $root . 'src/index.php' );
+		new WPGO_Blocks_Playground_BootStrap_PHP($this->module_roots);
+
     // Bootstrap block PHP
-    require_once clude __DIR__ . '/lib/block-filters.php';
+    require_once $root . 'classes/block-filters.php';
 
     // Enqueue JS and CSS
-    include __DIR__ . '/lib/register-scripts.php';
+    require_once $root . 'classes/register-scripts.php';
 
     // Register block categories
-    include __DIR__ . '/lib/block-categories.php';
+    require_once $root . 'classes/block-categories.php';
 
     // Setup Global Block Setting Options Setting
-    include __DIR__ . '/lib/wp-options.php';
+    require_once $root . 'classes/wp-options.php';
 
     // Register REST API Endpoint
-    include __DIR__ . '/lib/rest-api-endpoint.php';
+    require_once $root . 'classes/rest-api-endpoint.php';
 
     // Register blocks server side
-    include __DIR__ . '/lib/register-blocks.php';
+    require_once $root . 'classes/register-blocks.php';
 
     // Register any PHP block filters
-    include __DIR__ . '/lib/block-filters.php';
+    require_once $root . 'classes/block-filters.php';
 
 		// // enqueue plugin scripts
 		// require_once( $root . 'modules/classes/enqueue-scripts.php' );

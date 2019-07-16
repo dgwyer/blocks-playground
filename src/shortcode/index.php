@@ -1,6 +1,6 @@
 <?php
 
-namespace Gutenberg_Courses\Example_Block\Blocks\Dynamic;
+namespace Gutenberg_Courses\Example_Block\Blocks\Shortcode;
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
 /**
@@ -18,7 +18,7 @@ function register_dynamic_block() {
 	}
 
 	// Hook server side rendering into render callback
-	register_block_type( 'blocks-playground/dynamic', [
+	register_block_type( 'blocks-playground/shortcode', [
 		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
 	] );
 

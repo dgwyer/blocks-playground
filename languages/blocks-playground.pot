@@ -101,9 +101,19 @@ msgid "A look at how to build a basic dynamic block."
 msgstr ""
 
 #: src/dynamic/index.js:32
+#: src/shortcode/index.js:32
 msgid "Loading Posts"
 msgstr ""
 
 #: src/dynamic/index.js:37
+#: src/shortcode/index.js:37
 msgid "No Posts"
+msgstr ""
+
+#: src/shortcode/index.js:16
+msgid "Shortcode Example #1"
+msgstr ""
+
+#: src/shortcode/index.js:17
+msgid "Simple shortcode example."
 msgstr ""
