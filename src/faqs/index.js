@@ -9,9 +9,19 @@ import './style.scss';
  */
 const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
-const { Spinner } = wp.components;
+const {
+    Spinner,
+    PanelBody,
+    PanelRow,
+    ServerSideRender,
+    TextControl,
+    RadioControl,
+    SelectControl,
+    ColorPicker
+} = wp.components;
 const { withSelect } = wp.data;
 const { Fragment } = wp.element;
+const { InspectorControls } = wp.blockEditor;
 
 export default registerBlockType('blocks-playground/faqs', {
     title: __('FAQs', 'blocks-playground'),
@@ -21,11 +31,12 @@ export default registerBlockType('blocks-playground/faqs', {
         src: icon,
     },
     category: 'blocks-playground',
-    edit: withSelect(select => {
+    edit: withSelect((select) => {
         return {
             posts: select('core').getEntityRecords('postType', 'post', { per_page: 3 })
         };
-    })(({ posts, className, isSelected, setAttributes }) => {
+    })((props) => {
+        const { attributes: { page_depth }, posts, className, setAttributes, isSelected } = props;
         var markup;
 
         if (!posts) {
@@ -64,7 +75,25 @@ export default registerBlockType('blocks-playground/faqs', {
 
         return (
             <Fragment>
-                <div>Inspector controls here</div>
+                <InspectorControls>
+                    <PanelBody title={__('Page Settings', 'simple-sitemap')} initialOpen={false}>
+                        <PanelRow className="simple-sitemap">
+                            <p>Affects sitemap pages only.</p>
+                        </PanelRow>
+						<PanelRow className="simple-sitemap">
+							<TextControl
+								type="number"
+								label="Page indentation"
+								min="0"
+								max="5"
+								help="Leave at zero for auto-depth"
+								value={page_depth}
+								onChange={(value) => { setAttributes({ page_depth: value }); }}
+							/>
+						</PanelRow>
+                    </PanelBody>
+                </InspectorControls>
+                Page depth: {page_depth}
                 {markup}
             </Fragment>
         );

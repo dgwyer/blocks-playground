@@ -4129,9 +4129,18 @@ var icon = wp.element.createElement(
  */
 var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
-var Spinner = wp.components.Spinner;
+var _wp$components = wp.components,
+    Spinner = _wp$components.Spinner,
+    PanelBody = _wp$components.PanelBody,
+    PanelRow = _wp$components.PanelRow,
+    ServerSideRender = _wp$components.ServerSideRender,
+    TextControl = _wp$components.TextControl,
+    RadioControl = _wp$components.RadioControl,
+    SelectControl = _wp$components.SelectControl,
+    ColorPicker = _wp$components.ColorPicker;
 var withSelect = wp.data.withSelect;
 var Fragment = wp.element.Fragment;
+var InspectorControls = wp.blockEditor.InspectorControls;
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType('blocks-playground/faqs', {
@@ -4146,11 +4155,12 @@ var Fragment = wp.element.Fragment;
         return {
             posts: select('core').getEntityRecords('postType', 'post', { per_page: 3 })
         };
-    })(function (_ref) {
-        var posts = _ref.posts,
-            className = _ref.className,
-            isSelected = _ref.isSelected,
-            setAttributes = _ref.setAttributes;
+    })(function (props) {
+        var page_depth = props.attributes.page_depth,
+            posts = props.posts,
+            className = props.className,
+            setAttributes = props.setAttributes,
+            isSelected = props.isSelected;
 
         var markup;
 
@@ -4208,10 +4218,39 @@ var Fragment = wp.element.Fragment;
             Fragment,
             null,
             wp.element.createElement(
-                'div',
+                InspectorControls,
                 null,
-                'Inspector controls here'
+                wp.element.createElement(
+                    PanelBody,
+                    { title: __('Page Settings', 'simple-sitemap'), initialOpen: false },
+                    wp.element.createElement(
+                        PanelRow,
+                        { className: 'simple-sitemap' },
+                        wp.element.createElement(
+                            'p',
+                            null,
+                            'Affects sitemap pages only.'
+                        )
+                    ),
+                    wp.element.createElement(
+                        PanelRow,
+                        { className: 'simple-sitemap' },
+                        wp.element.createElement(TextControl, {
+                            type: 'number',
+                            label: 'Page indentation',
+                            min: '0',
+                            max: '5',
+                            help: 'Leave at zero for auto-depth',
+                            value: page_depth,
+                            onChange: function onChange(value) {
+                                setAttributes({ page_depth: value });
+                            }
+                        })
+                    )
+                )
             ),
+            'Page depth: ',
+            page_depth,
             markup
         );
     }) // end withAPIData

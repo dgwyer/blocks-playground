@@ -101,29 +101,39 @@ msgid "A look at how to build a basic dynamic block."
 msgstr ""
 
 #: src/dynamic/index.js:32
+#: src/faqs/index.js:48
+#: src/faqs/index.js:49
+#: src/faqs/index.js:50
+#: src/faqs/index.js:47
+#: src/faqs/index.js:40
+#: src/faqs/index.js:39
+#: src/faqs/index.js:38
 #: src/faqs/index.js:37
 #: src/faqs/index.js:43
 #: src/faqs/index.js:44
-#: src/faqs/index.js:40
 #: src/faqs/index.js:41
 #: src/faqs/index.js:42
 #: src/faqs/index.js:36
-#: src/faqs/index.js:48
 #: src/faqs/index.js:35
 #: src/faqs/index.js:34
 #: src/faqs/index.js:33
 #: src/faqs/index.js:32
-#: src/faqs/index.js:49
 #: src/shortcode/index.js:32
 msgid "Loading Posts"
 msgstr ""
 
 #: src/dynamic/index.js:37
+#: src/faqs/index.js:56
+#: src/faqs/index.js:57
+#: src/faqs/index.js:58
+#: src/faqs/index.js:55
+#: src/faqs/index.js:48
+#: src/faqs/index.js:47
+#: src/faqs/index.js:46
 #: src/faqs/index.js:45
 #: src/faqs/index.js:51
 #: src/faqs/index.js:52
 #: src/faqs/index.js:53
-#: src/faqs/index.js:46
 #: src/faqs/index.js:49
 #: src/faqs/index.js:50
 #: src/faqs/index.js:54
@@ -139,14 +149,22 @@ msgstr ""
 msgid "No Posts"
 msgstr ""
 
-#: src/faqs/index.js:17
+#: src/faqs/index.js:27
 msgid "FAQs"
 msgstr ""
 
+#: src/faqs/index.js:28
+#: src/faqs/index.js:21
+#: src/faqs/index.js:20
+#: src/faqs/index.js:19
 #: src/faqs/index.js:18
 #: src/faqs/index.js:17
 #: src/shortcode/index.js:17
 msgid "Simple shortcode example."
+msgstr ""
+
+#: src/faqs/index.js:79
+msgid "Page Settings"
 msgstr ""
 
 #: src/faqs/index.js:16

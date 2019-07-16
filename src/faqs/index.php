@@ -25,7 +25,11 @@ function register_dynamic_block() {
 					'items' => [
 							'type' => 'string',
 					],
-			]
+				],
+				'page_depth' => [
+					'type' => 'number',
+					'default' => 0
+				]
 		]
 	] );
 }
