@@ -1,6 +1,6 @@
 <?php
 
-namespace Gutenberg_Courses\Example_Block\Blocks\Shortcode;
+namespace Gutenberg_Courses\Example_Block\Blocks\FAQs;
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
 /**
@@ -12,22 +12,30 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
  */
 function register_dynamic_block() {
 
-	// Only load if Gutenberg is available.
-	if ( ! function_exists( 'register_block_type' ) ) {
-		return;
-	}
-
 	// Hook server side rendering into render callback
-	register_block_type( 'blocks-playground/shortcode', [
-		'render_callback' => __NAMESPACE__ . '\render_dynamic_block'		
+	register_block_type( 'blocks-playground/faqs', [
+		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
+		'attributes'      => [
+			'some_string' => [
+					'default' => 'default string',
+					'type'    => 'string'
+			],
+			'some_array'  => [
+					'type'  => 'array',
+					'items' => [
+							'type' => 'string',
+					],
+			]
+		]
 	] );
-
 }
 
 /**
  * Server rendering for /blocks/examples/12-dynamic
  */
 function render_dynamic_block() {
+
+	return "<h3>FAQs Block!</h3>";
 
 	$recent_posts = wp_get_recent_posts( [
 		'numberposts' => 3,
