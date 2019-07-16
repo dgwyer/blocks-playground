@@ -34,7 +34,7 @@ export default class SubscribeDemo extends Component {
           <code>{"subscribe(() => {})"}</code>
         </pre>
         <p>
-          {__("Block Count:", "bpblocks")} {this.state.blockCount}
+          {__("Block Count:", "blocks-playground")} {this.state.blockCount}
         </p>
       </div>
     );

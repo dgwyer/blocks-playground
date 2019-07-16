@@ -58,9 +58,9 @@ function addCodeInspectorControls(BlockEdit) {
             <BlockEdit {...props} />
           </div>
           <InspectorControls>
-            <PanelBody title={__("Custom Settings", "bpblocks")}>
+            <PanelBody title={__("Custom Settings", "blocks-playground")}>
               <ToggleControl
-                label={__("High Contrast", "bpblocks")}
+                label={__("High Contrast", "blocks-playground")}
                 checked={props.attributes.highContrast}
                 onChange={highContrast => props.setAttributes({ highContrast })}
               />

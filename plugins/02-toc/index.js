@@ -16,11 +16,11 @@ const TableOfContents = props => {
   return (
     <Fragment>
       <PluginSidebarMoreMenuItem target="jsforwpadvgb-toc">
-        {__("Table of Contents", "bpblocks")}
+        {__("Table of Contents", "blocks-playground")}
       </PluginSidebarMoreMenuItem>
       <PluginSidebar
         name="jsforwpadvgb-toc"
-        title={__("Table of Contents", "bpblocks")}
+        title={__("Table of Contents", "blocks-playground")}
       >
         <PanelBody>
           <PanelRow>

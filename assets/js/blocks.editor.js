@@ -3530,14 +3530,14 @@ var Spinner = wp.components.Spinner;
 var withSelect = wp.data.withSelect;
 
 
-/* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType('bpblocks/dynamic', {
-    title: __('Some Example - Dynamic Block', 'bpblocks'),
-    description: __('A look at how to build a basic dynamic block.', 'bpblocks'),
+/* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType('blocks-playground/dynamic', {
+    title: __('Some Example - Dynamic Block', 'blocks-playground'),
+    description: __('A look at how to build a basic dynamic block.', 'blocks-playground'),
     icon: {
         background: 'rgba(254, 243, 224, 0.52)',
         src: __WEBPACK_IMPORTED_MODULE_0__icon__["a" /* default */]
     },
-    category: 'bpblocks',
+    category: 'blocks-playground',
     edit: withSelect(function (select) {
         return {
             posts: select('core').getEntityRecords('postType', 'post', { per_page: 3 })
@@ -3553,14 +3553,14 @@ var withSelect = wp.data.withSelect;
                 'p',
                 { className: className },
                 wp.element.createElement(Spinner, null),
-                __('Loading Posts', 'bpblocks')
+                __('Loading Posts', 'blocks-playground')
             );
         }
         if (0 === posts.length) {
             return wp.element.createElement(
                 'p',
                 null,
-                __('No Posts', 'bpblocks')
+                __('No Posts', 'blocks-playground')
             );
         }
         return wp.element.createElement(
@@ -3649,12 +3649,12 @@ var _wp$components = wp.components,
  * Register block
  */
 
-/* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType("bpblocks/gallery", {
-  title: __("Gallery", "bpblocks"),
-  description: __("A demo custom gallery block", "bpblocks"),
-  category: "bpblocks",
+/* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType("blocks-playground/gallery", {
+  title: __("Gallery", "blocks-playground"),
+  description: __("A demo custom gallery block", "blocks-playground"),
+  category: "blocks-playground",
   icon: __WEBPACK_IMPORTED_MODULE_1__icon__["a" /* default */],
-  keywords: [__("Masonry", "bpblocks"), __("Images Media", "bpblocks"), __("Lightbox", "bpblocks")],
+  keywords: [__("Masonry", "blocks-playground"), __("Images Media", "blocks-playground"), __("Lightbox", "blocks-playground")],
   attributes: {
     images: {
       type: "array",
@@ -3702,14 +3702,14 @@ var _wp$components = wp.components,
         wp.element.createElement(
           PanelBody,
           {
-            title: __("Gallery Settings", "bpblocks"),
+            title: __("Gallery Settings", "blocks-playground"),
             initialOpen: true
           },
           wp.element.createElement(
             PanelRow,
             null,
             wp.element.createElement(RadioControl, {
-              label: __("Grid Style", "bpblocks"),
+              label: __("Grid Style", "blocks-playground"),
               selected: direction,
               options: [{ label: "Rows", value: "row" }, { label: "Columns", value: "column" }],
               onChange: function onChange(direction) {
@@ -3721,7 +3721,7 @@ var _wp$components = wp.components,
             PanelRow,
             null,
             wp.element.createElement(ToggleControl, {
-              label: __("Enable / disable lightbox", "bpblocks"),
+              label: __("Enable / disable lightbox", "blocks-playground"),
               checked: isLightboxEnabled,
               onChange: function onChange(isLightboxEnabled) {
                 return setAttributes({ isLightboxEnabled: isLightboxEnabled });
@@ -3748,7 +3748,7 @@ var _wp$components = wp.components,
               var open = _ref.open;
               return wp.element.createElement(IconButton, {
                 className: "components-toolbar__control",
-                label: __("Edit Gallery", "bpblocks"),
+                label: __("Edit Gallery", "blocks-playground"),
                 icon: "edit",
                 onClick: open
               });
@@ -3762,8 +3762,8 @@ var _wp$components = wp.components,
         !!!images.length ? wp.element.createElement(MediaPlaceholder, {
           icon: __WEBPACK_IMPORTED_MODULE_1__icon__["a" /* default */],
           labels: {
-            title: __("Gallery", "bpblocks"),
-            instructions: __("Drag images, upload new ones or select files from your library", "bpblocks")
+            title: __("Gallery", "blocks-playground"),
+            instructions: __("Drag images, upload new ones or select files from your library", "blocks-playground")
           },
           accept: "images/*",
           multiple: true,

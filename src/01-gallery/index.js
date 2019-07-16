@@ -31,15 +31,15 @@ const {
  * Register block
  */
 
-export default registerBlockType("bpblocks/gallery", {
-  title: __("Gallery", "bpblocks"),
-  description: __("A demo custom gallery block", "bpblocks"),
-  category: "bpblocks",
+export default registerBlockType("blocks-playground/gallery", {
+  title: __("Gallery", "blocks-playground"),
+  description: __("A demo custom gallery block", "blocks-playground"),
+  category: "blocks-playground",
   icon,
   keywords: [
-    __("Masonry", "bpblocks"),
-    __("Images Media", "bpblocks"),
-    __("Lightbox", "bpblocks")
+    __("Masonry", "blocks-playground"),
+    __("Images Media", "blocks-playground"),
+    __("Lightbox", "blocks-playground")
   ],
   attributes: {
     images: {
@@ -84,12 +84,12 @@ export default registerBlockType("bpblocks/gallery", {
       <Fragment>
         <InspectorControls>
           <PanelBody
-            title={__("Gallery Settings", "bpblocks")}
+            title={__("Gallery Settings", "blocks-playground")}
             initialOpen={true}
           >
             <PanelRow>
               <RadioControl
-                label={__("Grid Style", "bpblocks")}
+                label={__("Grid Style", "blocks-playground")}
                 selected={direction}
                 options={[
                   { label: "Rows", value: "row" },
@@ -100,7 +100,7 @@ export default registerBlockType("bpblocks/gallery", {
             </PanelRow>
             <PanelRow>
               <ToggleControl
-                label={__("Enable / disable lightbox", "bpblocks")}
+                label={__("Enable / disable lightbox", "blocks-playground")}
                 checked={isLightboxEnabled}
                 onChange={isLightboxEnabled =>
                   setAttributes({ isLightboxEnabled })
@@ -121,7 +121,7 @@ export default registerBlockType("bpblocks/gallery", {
                 render={({ open }) => (
                   <IconButton
                     className="components-toolbar__control"
-                    label={__("Edit Gallery", "bpblocks")}
+                    label={__("Edit Gallery", "blocks-playground")}
                     icon="edit"
                     onClick={open}
                   />
@@ -135,10 +135,10 @@ export default registerBlockType("bpblocks/gallery", {
             <MediaPlaceholder
               icon={icon}
               labels={{
-                title: __("Gallery", "bpblocks"),
+                title: __("Gallery", "blocks-playground"),
                 instructions: __(
                   "Drag images, upload new ones or select files from your library",
-                  "bpblocks"
+                  "blocks-playground"
                 )
               }}
               accept="images/*"

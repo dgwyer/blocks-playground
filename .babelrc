@@ -2,7 +2,7 @@
 	"presets": [ "@wordpress/default" ],
 	"plugins": [
 		[ "@wordpress/babel-plugin-makepot", {
-			"output": "languages/bpblocks.pot"
+			"output": "languages/blocks-playground.pot"
 		} ],
 		"transform-class-properties"
 	]

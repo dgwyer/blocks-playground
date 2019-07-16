@@ -17,7 +17,7 @@ const DispatchDemo = ({ blocks }) => (
               dispatch("core/editor").removeBlock(block.clientId);
             }}
           >
-            {__("X", "bpblocks")}
+            {__("X", "blocks-playground")}
           </Button>
         </li>
       ))}

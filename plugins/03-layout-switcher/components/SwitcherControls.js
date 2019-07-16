@@ -10,23 +10,23 @@ const SwitcherControls = ({ blocks, icons, layouts }) => {
   const blockIds = blocks.map(block => block.clientId);
   return (
     <Fragment>
-      <PanelBody title={__("Layout Choices", "bpblocks")} opened>
+      <PanelBody title={__("Layout Choices", "blocks-playground")} opened>
         <PanelRow className="layout-switcher">
           <SwitcherButton
-            label={__("Hero", "bpblocks")}
+            label={__("Hero", "blocks-playground")}
             icon={icons.hero}
             blockIds={blockIds}
             layout={layouts.hero}
           />
           <SwitcherButton
-            label={__("Feature", "bpblocks")}
+            label={__("Feature", "blocks-playground")}
             icon={icons.featured}
             blockIds={blockIds}
             layout={layouts.featured}
           />
         </PanelRow>
       </PanelBody>
-      <PanelBody title={__("Reset Layout", "bpblocks")}>
+      <PanelBody title={__("Reset Layout", "blocks-playground")}>
         <PanelRow>
           <ResetControls layout={layouts.default} />
         </PanelRow>

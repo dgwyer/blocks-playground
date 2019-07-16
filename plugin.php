@@ -1,12 +1,12 @@
 <?php
 /*
- * Plugin Name: Boilerplate Blocks
+ * Plugin Name: Blocks Playground
  * Plugin URI:  https://wpgoplugins.com/
- * Description: A small collection of experimental boilerplate blocks.
+ * Description: A small collection of experimental blocks.
  * Version:     1.0.0
  * Author:      David Gwyer
  * Author URI:  https://twitter.com/dgwyer
- * Text Domain: bpblocks
+ * Text Domain: blocks-playground
  * Domain Path: /languages
  * License:     GPL2+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html

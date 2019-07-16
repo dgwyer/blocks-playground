@@ -11,13 +11,13 @@ import DispatchDemo from "./components/DispatchDemo";
 import WithDispatchDemo from "./components/WithDispatchDemo";
 import WithComposeDemo from "./components/WithComposeDemo";
 
-export default registerBlockType("bpblocks/data-example", {
-  title: __("Data API Example", "bpblocks"),
+export default registerBlockType("blocks-playground/data-example", {
+  title: __("Data API Example", "blocks-playground"),
   description: __(
     "Demo of select, subscribe, dispatch, withSelect, withDispatch and compose",
-    "bpblocks"
+    "blocks-playground"
   ),
-  category: "bpblocks",
+  category: "blocks-playground",
   icon,
   attributes: {},
   edit: props => {
@@ -34,6 +34,6 @@ export default registerBlockType("bpblocks/data-example", {
     );
   },
   save: props => {
-    return <p>{__("Data API Example", "bpblocks")}</p>;
+    return <p>{__("Data API Example", "blocks-playground")}</p>;
   }
 });

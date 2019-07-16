@@ -14,20 +14,20 @@ const ResetControls = ({
   return (
     <Fragment>
       <Button isLink isDestructive onClick={() => setState({ isOpen: true })}>
-        {__("Reset Layout", "bpblocks")}
+        {__("Reset Layout", "blocks-playground")}
       </Button>
       {isOpen && (
         <Modal
           className="layout-switcher-reset"
-          title={__("Warning!", "bpblocks")}
+          title={__("Warning!", "blocks-playground")}
           onRequestClose={() => setState({ isOpen: false })}
         >
           <p>
-            {__("This action will remove all blocks", "bpblocks")}
+            {__("This action will remove all blocks", "blocks-playground")}
             <strong>
               {__(
                 "This can be undone before leaving the page with the Undo option.",
-                "bpblocks"
+                "blocks-playground"
               )}
             </strong>
           </p>
@@ -40,7 +40,7 @@ const ResetControls = ({
                 setState({ isOpen: false });
               }}
             >
-              {__("Reset Layout", "bpblocks")}
+              {__("Reset Layout", "blocks-playground")}
             </Button>
           </p>
         </Modal>

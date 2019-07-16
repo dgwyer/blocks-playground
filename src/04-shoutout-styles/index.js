@@ -16,17 +16,17 @@ const { RichText } = wp.editor;
 /**
  * Register example block
  */
-export default registerBlockType("bpblocks/shoutout-styles", {
-  title: __("Shoutout", "bpblocks"),
+export default registerBlockType("blocks-playground/shoutout-styles", {
+  title: __("Shoutout", "blocks-playground"),
   description: __(
     "An example block for working with Styles API.",
-    "bpblocks"
+    "blocks-playground"
   ),
-    category: "bpblocks",
+    category: "blocks-playground",
   icon: {
     src: "megaphone"
   },
-  keywords: [__("Call to Action", "bpblocks")],
+  keywords: [__("Call to Action", "blocks-playground")],
   attributes: {
     headline: {
       type: "string"
@@ -57,12 +57,12 @@ export default registerBlockType("bpblocks/shoutout-styles", {
         <RichText
           value={headline}
           tagName="h2"
-          placeholder={__("Headline", "bpblocks")}
+          placeholder={__("Headline", "blocks-playground")}
           onChange={headline => setAttributes({ headline })}
         />
         <RichText
           value={text}
-          placeholder={__("Shoutout Text", "bpblocks")}
+          placeholder={__("Shoutout Text", "blocks-playground")}
           onChange={text => setAttributes({ text })}
         />
       </div>

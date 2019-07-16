@@ -11,12 +11,12 @@ function extendWithRegisterBlockType(settings, name) {
   // Check for block type
   if ("core/code" === name) {
     // Change the block title
-    settings.title = __("Code Snippet", "bpblocks");
+    settings.title = __("Code Snippet", "blocks-playground");
 
     // Change the block description
     settings.description = __(
       "Use for maximum codiness 💃",
-      "bpblocks"
+      "blocks-playground"
     );
 
     // Change block category
@@ -27,9 +27,9 @@ function extendWithRegisterBlockType(settings, name) {
 
     // Change keywords
     if (settings.keywords) {
-      settings.keywords.push(__("💻", "bpblocks"));
+      settings.keywords.push(__("💻", "blocks-playground"));
     } else {
-      settings.keywords = [__("💻", "bpblocks")];
+      settings.keywords = [__("💻", "blocks-playground")];
     }
 
     // Change supports

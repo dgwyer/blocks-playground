@@ -54,7 +54,7 @@ export default class Edit extends Component {
     if (this.state.isLoading) {
       return (
         <p>
-          <Spinner /> {__("Loading", "bpblocks")}
+          <Spinner /> {__("Loading", "blocks-playground")}
         </p>
       );
     }
@@ -63,14 +63,14 @@ export default class Edit extends Component {
       <Fragment>
         <InspectorControls>
           <PanelBody
-            title={__("Block Setting", "bpblocks")}
+            title={__("Block Setting", "blocks-playground")}
             initialOpen
           >
             <PanelRow>
               {this.state.isEditing || this.state.blockSetting === "" ? (
                 <p>
                   <TextControl
-                    label={__("Please enter a setting", "bpblocks")}
+                    label={__("Please enter a setting", "blocks-playground")}
                     value={this.state.blockSetting}
                     onChange={blockSetting => {
                       if (!this.state.isSaving) {
@@ -88,7 +88,7 @@ export default class Edit extends Component {
                       this.updateSetting();
                     }}
                   >
-                    {__("Save Setting", "bpblocks")}
+                    {__("Save Setting", "blocks-playground")}
                   </Button>{" "}
                   <Button
                     isDefault
@@ -99,12 +99,12 @@ export default class Edit extends Component {
                       this.setState({ blockSetting });
                     }}
                   >
-                    {__("Cancel", "bpblocks")}
+                    {__("Cancel", "blocks-playground")}
                   </Button>
                 </p>
               ) : (
                 <Fragment>
-                  <p>{__("Global Setting Saved", "bpblocks")}</p>
+                  <p>{__("Global Setting Saved", "blocks-playground")}</p>
                   <Button
                     isDefault
                     onClick={() => {
@@ -113,7 +113,7 @@ export default class Edit extends Component {
                       });
                     }}
                   >
-                    {__("Edit", "bpblocks")}
+                    {__("Edit", "blocks-playground")}
                   </Button>
                 </Fragment>
               )}
@@ -125,12 +125,12 @@ export default class Edit extends Component {
             <p>
               {__(
                 "Please enter a block settings value in the block settings.",
-                "bpblocks"
+                "blocks-playground"
               )}
             </p>
           ) : (
             <p>
-              {__("Global Setting: ", "bpblocks")}
+              {__("Global Setting: ", "blocks-playground")}
               {this.state.blockSetting}
             </p>
           )}

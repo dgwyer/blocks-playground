@@ -32,19 +32,19 @@ function getSettings(attributes) {
  * Register static block example block
  */
 export default registerBlockType(
-    'bpblocks/form-fields',
+    'blocks-playground/form-fields',
     {
-        title: __('Example - Form Fields', 'bpblocks'),
-        description: __('An example of how to use form component in a block.', 'bpblocks'),
+        title: __('Example - Form Fields', 'blocks-playground'),
+        description: __('An example of how to use form component in a block.', 'blocks-playground'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },
         keywords: [
-            __('Palette', 'bpblocks'),
-            __('Settings', 'bpblocks'),
-            __('Scheme', 'bpblocks'),
+            __('Palette', 'blocks-playground'),
+            __('Settings', 'blocks-playground'),
+            __('Scheme', 'blocks-playground'),
         ],
         attributes,
         getEditWrapperProps(attributes) {
@@ -68,7 +68,7 @@ export default registerBlockType(
 
             return (
                 <div>
-                    <p>{__('Check the settings', 'bpblocks')}</p>
+                    <p>{__('Check the settings', 'blocks-playground')}</p>
                     <ul>
                         {settings}
                     </ul>

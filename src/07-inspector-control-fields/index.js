@@ -31,11 +31,11 @@ function getSettings(attributes) {
 /**
  * Register inspector control example block
  */
-export default registerBlockType("bpblocks/inspector-control-fields", {
-  title: __("Example - Inspector Fields", "bpblocks"),
+export default registerBlockType("blocks-playground/inspector-control-fields", {
+  title: __("Example - Inspector Fields", "blocks-playground"),
   description: __(
     "An example of how to use form fields in the Inspector element.",
-    "bpblocks"
+    "blocks-playground"
   ),
   category: "common",
   icon: {
@@ -43,9 +43,9 @@ export default registerBlockType("bpblocks/inspector-control-fields", {
     src: icon
   },
   keywords: [
-    __("Palette", "bpblocks"),
-    __("Settings", "bpblocks"),
-    __("Scheme", "bpblocks")
+    __("Palette", "blocks-playground"),
+    __("Settings", "blocks-playground"),
+    __("Scheme", "blocks-playground")
   ],
   attributes,
   getEditWrapperProps(attributes) {

@@ -12,14 +12,14 @@ const { registerBlockType } = wp.blocks;
 const { Spinner } = wp.components;
 const { withSelect } = wp.data;
 
-export default registerBlockType( 'bpblocks/dynamic', {
-        title: __( 'Some Example - Dynamic Block', 'bpblocks'),
-        description: __( 'A look at how to build a basic dynamic block.', 'bpblocks'),
+export default registerBlockType( 'blocks-playground/dynamic', {
+        title: __( 'Some Example - Dynamic Block', 'blocks-playground'),
+        description: __( 'A look at how to build a basic dynamic block.', 'blocks-playground'),
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },         
-        category: 'bpblocks',
+        category: 'blocks-playground',
         edit: withSelect( select => {
                 return {
                     posts: select( 'core' ).getEntityRecords( 'postType', 'post', { per_page: 3 } )
@@ -29,12 +29,12 @@ export default registerBlockType( 'bpblocks/dynamic', {
                     return (
                         <p className={className} >
                             <Spinner />
-                            { __( 'Loading Posts', 'bpblocks' ) }
+                            { __( 'Loading Posts', 'blocks-playground' ) }
                         </p>
                     );
                 }
                 if ( 0 === posts.length ) {
-                    return <p>{ __( 'No Posts', 'bpblocks' ) }</p>;
+                    return <p>{ __( 'No Posts', 'blocks-playground' ) }</p>;
                 }
                 return (
                     <ul className={ className }>

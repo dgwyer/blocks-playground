@@ -9,7 +9,7 @@ const DeleteButton = ({ clientId, removeBlock }) => (
       removeBlock(clientId);
     }}
   >
-    {__("X", "bpblocks")}
+    {__("X", "blocks-playground")}
   </Button>
 );
 

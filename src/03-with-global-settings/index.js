@@ -13,21 +13,21 @@ const { registerBlockType } = wp.blocks;
 /**
  * Register block
  */
-export default registerBlockType("bpblocks/with-global-settings", {
-  title: __("With Global Settings", "bpblocks"),
+export default registerBlockType("blocks-playground/with-global-settings", {
+  title: __("With Global Settings", "blocks-playground"),
   description: __(
     "Example block with global block settings",
-    "bpblocks"
+    "blocks-playground"
   ),
-  category: "bpblocks",
+  category: "blocks-playground",
   icon: {
     src: icon
   },
-  keywords: [__("API Key", "bpblocks")],
+  keywords: [__("API Key", "blocks-playground")],
   edit: props => {
     return <Edit {...props} />;
   },
   save: props => {
-    return <p>{__("Show block global settings", "bpblocks")}</p>;
+    return <p>{__("Show block global settings", "blocks-playground")}</p>;
   }
 });

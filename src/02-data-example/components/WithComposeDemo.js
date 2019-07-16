@@ -16,7 +16,7 @@ const WithComposeDemo = ({ blocks, removeBlock }) => (
             className="is-button is-default"
             onClick={() => removeBlock(block.clientId)}
           >
-            {__("X", "bpblocks")}
+            {__("X", "blocks-playground")}
           </Button>
         </li>
       ))}

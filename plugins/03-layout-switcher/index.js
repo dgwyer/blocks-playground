@@ -14,7 +14,7 @@ const LayoutSwitcher = () => {
     hero: [
       createBlock("core/cover", { align: "full" }),
       createBlock("core/button", {
-        text: __("Layout Switcher", "bpblocks"),
+        text: __("Layout Switcher", "blocks-playground"),
         align: "center"
       }),
       createBlock("core/columns", { columns: 3 })
@@ -28,7 +28,7 @@ const LayoutSwitcher = () => {
       createBlock("core/spacer", { height: "20" }),
       createBlock("core/media-text", { mediaPosition: "right" }),
       createBlock("core/paragraph", {
-        placeholder: __("Outro Text", "bpblocks")
+        placeholder: __("Outro Text", "blocks-playground")
       })
     ]
   };
@@ -36,11 +36,11 @@ const LayoutSwitcher = () => {
   return (
     <Fragment>
       <PluginSidebarMoreMenuItem target="jsforwpadvgb-layout-switcher">
-        {__("Layout Switcher", "bpblocks")}
+        {__("Layout Switcher", "blocks-playground")}
       </PluginSidebarMoreMenuItem>
       <PluginSidebar
         name="jsforwpadvgb-layout-switcher"
-        title={__("Layout Switcher", "bpblocks")}
+        title={__("Layout Switcher", "blocks-playground")}
       >
         <SwitcherControls icons={icons} layouts={layouts} />
       </PluginSidebar>

@@ -33,19 +33,19 @@ const {
   * Register block
  */
 export default registerBlockType(
-    'bpblocks/inspector-controls',
+    'blocks-playground/inspector-controls',
     {
-        title: __( 'Example - Inspector Controls', 'bpblocks' ),
-        description: __( 'An example of how to use the Inspector component for a block.', 'bpblocks'),
+        title: __( 'Example - Inspector Controls', 'blocks-playground' ),
+        description: __( 'An example of how to use the Inspector component for a block.', 'blocks-playground'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icons.sidebar,
         },                 
         keywords: [
-            __( 'Button', 'bpblocks' ),
-            __( 'Settings', 'bpblocks' ),
-            __( 'Controls', 'bpblocks' ),
+            __( 'Button', 'blocks-playground' ),
+            __( 'Settings', 'blocks-playground' ),
+            __( 'Controls', 'blocks-playground' ),
         ],
         attributes: {
             textAlignment: {
@@ -78,17 +78,17 @@ export default registerBlockType(
             return [
                 <InspectorControls>
                     <PanelBody
-                        title={ __( 'High Contrast', 'bpblocks' ) }
+                        title={ __( 'High Contrast', 'blocks-playground' ) }
                     >
                         <PanelRow>
                             <label
                                 htmlFor="high-contrast-form-toggle"
                             >
-                                { __( 'High Contrast', 'bpblocks' ) }
+                                { __( 'High Contrast', 'blocks-playground' ) }
                             </label>
                             <FormToggle
                                 id="high-contrast-form-toggle"
-                                label={ __( 'High Contrast', 'bpblocks' ) }
+                                label={ __( 'High Contrast', 'blocks-playground' ) }
                                 checked={ highContrast }
                                 onChange={ toggleHighContrast }
                             />
@@ -101,7 +101,7 @@ export default registerBlockType(
                         onChange={ ( textAlignment ) => props.setAttributes( { textAlignment } ) }
                     />
                     <Toolbar>
-                        <Tooltip text={ __( 'High Contrast', 'bpblocks' )  }>
+                        <Tooltip text={ __( 'High Contrast', 'blocks-playground' )  }>
                             <Button
                                 className={ classnames(
                                     'components-icon-button',

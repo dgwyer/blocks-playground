@@ -42,26 +42,26 @@ export default class Inspector extends Component {
     return (
       <InspectorControls>
         <PanelBody
-          title={__("Panel Body Title", "bpblocks")}
+          title={__("Panel Body Title", "blocks-playground")}
           initialOpen={false}
         >
           <PanelRow>
-            <p>{__("Panel Body Copy", "bpblocks")}</p>
+            <p>{__("Panel Body Copy", "blocks-playground")}</p>
           </PanelRow>
         </PanelBody>
 
         <PanelBody>
           <CheckboxControl
-            heading={__("Checkbox Control", "bpblocks")}
-            label={__("Check here", "bpblocks")}
-            help={__("Checkbox control help text", "bpblocks")}
+            heading={__("Checkbox Control", "blocks-playground")}
+            label={__("Check here", "blocks-playground")}
+            help={__("Checkbox control help text", "blocks-playground")}
             checked={checkboxControl}
             onChange={checkboxControl => setAttributes({ checkboxControl })}
           />
         </PanelBody>
 
         <PanelColorSettings
-          title={__("Color Panel", "bpblocks")}
+          title={__("Color Panel", "blocks-playground")}
           colorSettings={[
             {
               label: __("Color Picker"),
@@ -75,7 +75,7 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <RadioControl
-            label={__("Radio Control", "bpblocks")}
+            label={__("Radio Control", "blocks-playground")}
             selected={radioControl}
             options={[
               { label: "Author", value: "a" },
@@ -89,7 +89,7 @@ export default class Inspector extends Component {
           <RangeControl
             beforeIcon="arrow-left-alt2"
             afterIcon="arrow-right-alt2"
-            label={__("Range Control", "bpblocks")}
+            label={__("Range Control", "blocks-playground")}
             value={rangeControl}
             onChange={rangeControl => setAttributes({ rangeControl })}
             min={1}
@@ -99,8 +99,8 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <TextControl
-            label={__("Text Control", "bpblocks")}
-            help={__("Text control help text", "bpblocks")}
+            label={__("Text Control", "blocks-playground")}
+            help={__("Text control help text", "blocks-playground")}
             value={textControl}
             onChange={textControl => setAttributes({ textControl })}
           />
@@ -108,8 +108,8 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <TextareaControl
-            label={__("Text Area Control", "bpblocks")}
-            help={__("Text area control help text", "bpblocks")}
+            label={__("Text Area Control", "blocks-playground")}
+            help={__("Text area control help text", "blocks-playground")}
             value={textareaControl}
             onChange={textareaControl => setAttributes({ textareaControl })}
           />
@@ -117,7 +117,7 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <ToggleControl
-            label={__("Toggle Control", "bpblocks")}
+            label={__("Toggle Control", "blocks-playground")}
             checked={toggleControl}
             onChange={toggleControl => setAttributes({ toggleControl })}
           />
@@ -125,7 +125,7 @@ export default class Inspector extends Component {
 
         <PanelBody>
           <SelectControl
-            label={__("Select Control", "bpblocks")}
+            label={__("Select Control", "blocks-playground")}
             value={selectControl}
             options={[
               { value: "a", label: "Option A" },

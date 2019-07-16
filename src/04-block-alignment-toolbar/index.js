@@ -23,19 +23,19 @@ const {
   * Register block
  */
 export default registerBlockType(
-    'bpblocks/block-alignment-toolbar',
+    'blocks-playground/block-alignment-toolbar',
     {
-        title: __( 'Example - Block Alignment Toolbar', 'bpblocks' ),
-        description: __( 'How to add an alignment toolbar to a block for aligning an entire block.', 'bpblocks' ),
+        title: __( 'Example - Block Alignment Toolbar', 'blocks-playground' ),
+        description: __( 'How to add an alignment toolbar to a block for aligning an entire block.', 'blocks-playground' ),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: 'align-none',
         },           
         keywords: [
-            __( 'Toolbar', 'bpblocks' ),
-            __( 'Settings', 'bpblocks' ),
-            __( 'Float', 'bpblocks' ),
+            __( 'Toolbar', 'blocks-playground' ),
+            __( 'Settings', 'blocks-playground' ),
+            __( 'Float', 'blocks-playground' ),
         ],
         attributes: {
             message: {
@@ -76,7 +76,7 @@ export default registerBlockType(
                 <RichText
                     tagName="div"
                     multiline="p"
-                    placeholder={ __( 'Enter your message here..', 'bpblocks' ) }
+                    placeholder={ __( 'Enter your message here..', 'blocks-playground' ) }
                     value={ message }
                     style={ { textAlign: textAlignment } }
                     onChange={ message => setAttributes( { message } ) }

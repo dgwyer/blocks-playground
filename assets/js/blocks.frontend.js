@@ -5997,7 +5997,7 @@ var render = wp.element.render;
 
 
 
-var galleries = document.querySelectorAll(".wp-block-bpblocks-gallery");
+var galleries = document.querySelectorAll(".wp-block-blocks-playground-gallery");
 
 galleries.forEach(function (gallery, index) {
   var direction = gallery.dataset.direction;

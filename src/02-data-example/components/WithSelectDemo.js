@@ -7,7 +7,7 @@ const WithSelectDemo = ({ blockCount }) => (
       <code>{`withSelect(()=> {})(WithSelectDemo)`}</code>
     </pre>
     <p>
-      {__("Block Count:", "bpblocks")} {blockCount}
+      {__("Block Count:", "blocks-playground")} {blockCount}
     </p>
   </div>
 );

@@ -8,16 +8,16 @@ add_filter( 'block_categories', function( $categories, $post ) {
 		$categories,
 		[
 			[
-                'slug' => 'bpblocks',
+                'slug' => 'blocks-playground',
                 'icon' => 'wordpress-alt',
-				'title' => __( 'JS for WP - Advanced Blocks', 'bpblocks' ),
+				'title' => __( 'JS for WP - Advanced Blocks', 'blocks-playground' ),
 			],
 		],
 		[
 			[
                 'slug' => 'recommended',
                 'icon' => 'star-filled',
-				'title' => __( 'Recommended Blocks', 'bpblocks' ),
+				'title' => __( 'Recommended Blocks', 'blocks-playground' ),
 			],
 		]
 	);

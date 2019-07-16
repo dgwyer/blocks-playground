@@ -7,17 +7,17 @@ registerBlockStyle("core/quote", {
   label: "Colorful Quote"
 });
 
-registerBlockStyle("bpblocks/shoutout-styles", {
+registerBlockStyle("blocks-playground/shoutout-styles", {
   name: "default",
   label: "Default"
 });
 
-registerBlockStyle("bpblocks/shoutout-styles", {
+registerBlockStyle("blocks-playground/shoutout-styles", {
   name: "serious",
   label: "Serious"
 });
 
-registerBlockStyle("bpblocks/shoutout-styles", {
+registerBlockStyle("blocks-playground/shoutout-styles", {
   name: "colorful",
   label: "Colorful"
 });

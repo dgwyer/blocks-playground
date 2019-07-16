@@ -25,19 +25,19 @@ const {
  * Register example block
  */
 export default registerBlockType(
-    'bpblocks/url-input',
+    'blocks-playground/url-input',
     {
-        title: __( 'Example - URL Input', 'bpblocks' ),
-        description: __( 'An example of how to use the URLInput component.', 'bpblocks'),
+        title: __( 'Example - URL Input', 'blocks-playground' ),
+        description: __( 'An example of how to use the URLInput component.', 'blocks-playground'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },         
         keywords: [
-            __( 'Link', 'bpblocks' ),
-            __( 'Post', 'bpblocks' ),
-            __( 'Search', 'bpblocks' ),
+            __( 'Link', 'blocks-playground' ),
+            __( 'Post', 'blocks-playground' ),
+            __( 'Search', 'blocks-playground' ),
         ],
         attributes: {
             text: {
@@ -62,11 +62,11 @@ export default registerBlockType(
                         <Fragment>
                             <TextControl
                                 id="example-input-field"
-                                label={ __( 'Link Text', 'bpblocks' ) }
+                                label={ __( 'Link Text', 'blocks-playground' ) }
                                 value={ text }
                                 onChange={ text => setAttributes( { text } ) }
                             />
-                            <p>{ __( 'Link URL', 'bpblocks' ) }</p>
+                            <p>{ __( 'Link URL', 'blocks-playground' ) }</p>
                             <form
                                 className="blocks-format-toolbar__link-modal-line blocks-format-toolbar__link-modal-line"
                                 onSubmit={ event => event.preventDefault() }
@@ -81,7 +81,7 @@ export default registerBlockType(
                                 />
                                 <IconButton
                                     icon="editor-break"
-                                    label={ __( 'Apply', 'bpblocks' ) }
+                                    label={ __( 'Apply', 'blocks-playground' ) }
                                     type="submit"
                                 />
                             </form>
@@ -91,7 +91,7 @@ export default registerBlockType(
 
                         <p>
                             <a href={ url }>
-                                { text || __( 'Edit link', 'bpblocks' ) }
+                                { text || __( 'Edit link', 'blocks-playground' ) }
                             </a>
                         </p>
 

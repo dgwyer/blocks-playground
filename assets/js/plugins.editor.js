@@ -108,24 +108,24 @@ var PluginSidebarDemo = function PluginSidebarDemo(props) {
     wp.element.createElement(
       PluginSidebarMoreMenuItem,
       { target: "jsforwpadvgb-demo" },
-      __("Plugin Sidebar Demo", "bpblocks")
+      __("Plugin Sidebar Demo", "blocks-playground")
     ),
     wp.element.createElement(
       PluginSidebar,
       {
         name: "jsforwpadvgb-demo",
-        title: __("Plugin Sidebar Demo", "bpblocks")
+        title: __("Plugin Sidebar Demo", "blocks-playground")
       },
       wp.element.createElement(
         PanelBody,
-        { title: __("Sidebar Header", "bpblocks"), opened: true },
+        { title: __("Sidebar Header", "blocks-playground"), opened: true },
         wp.element.createElement(
           PanelRow,
           null,
           wp.element.createElement(
             "p",
             null,
-            __("Plugin Sidebar Demo", "bpblocks")
+            __("Plugin Sidebar Demo", "blocks-playground")
           )
         )
       )
@@ -176,13 +176,13 @@ var TableOfContents = function TableOfContents(props) {
     wp.element.createElement(
       PluginSidebarMoreMenuItem,
       { target: "jsforwpadvgb-toc" },
-      __("Table of Contents", "bpblocks")
+      __("Table of Contents", "blocks-playground")
     ),
     wp.element.createElement(
       PluginSidebar,
       {
         name: "jsforwpadvgb-toc",
-        title: __("Table of Contents", "bpblocks")
+        title: __("Table of Contents", "blocks-playground")
       },
       wp.element.createElement(
         PanelBody,
@@ -372,11 +372,11 @@ var LayoutSwitcher = function LayoutSwitcher() {
   var layouts = {
     default: [createBlock("core/paragraph", {})],
     hero: [createBlock("core/cover", { align: "full" }), createBlock("core/button", {
-      text: __("Layout Switcher", "bpblocks"),
+      text: __("Layout Switcher", "blocks-playground"),
       align: "center"
     }), createBlock("core/columns", { columns: 3 })],
     featured: [createBlock("core/heading", {}), createBlock("core/spacer", { height: "10" }), createBlock("core/media-text", { align: "full" }), createBlock("core/spacer", { height: "40" }), createBlock("core/quote", {}), createBlock("core/spacer", { height: "20" }), createBlock("core/media-text", { mediaPosition: "right" }), createBlock("core/paragraph", {
-      placeholder: __("Outro Text", "bpblocks")
+      placeholder: __("Outro Text", "blocks-playground")
     })]
   };
 
@@ -386,13 +386,13 @@ var LayoutSwitcher = function LayoutSwitcher() {
     wp.element.createElement(
       PluginSidebarMoreMenuItem,
       { target: "jsforwpadvgb-layout-switcher" },
-      __("Layout Switcher", "bpblocks")
+      __("Layout Switcher", "blocks-playground")
     ),
     wp.element.createElement(
       PluginSidebar,
       {
         name: "jsforwpadvgb-layout-switcher",
-        title: __("Layout Switcher", "bpblocks")
+        title: __("Layout Switcher", "blocks-playground")
       },
       wp.element.createElement(__WEBPACK_IMPORTED_MODULE_2__components_SwitcherControls__["a" /* default */], { icons: __WEBPACK_IMPORTED_MODULE_0__icons__["a" /* default */], layouts: layouts })
     )
@@ -491,18 +491,18 @@ var SwitcherControls = function SwitcherControls(_ref) {
     null,
     wp.element.createElement(
       PanelBody,
-      { title: __("Layout Choices", "bpblocks"), opened: true },
+      { title: __("Layout Choices", "blocks-playground"), opened: true },
       wp.element.createElement(
         PanelRow,
         { className: "layout-switcher" },
         wp.element.createElement(__WEBPACK_IMPORTED_MODULE_0__SwitcherButton__["a" /* default */], {
-          label: __("Hero", "bpblocks"),
+          label: __("Hero", "blocks-playground"),
           icon: icons.hero,
           blockIds: blockIds,
           layout: layouts.hero
         }),
         wp.element.createElement(__WEBPACK_IMPORTED_MODULE_0__SwitcherButton__["a" /* default */], {
-          label: __("Feature", "bpblocks"),
+          label: __("Feature", "blocks-playground"),
           icon: icons.featured,
           blockIds: blockIds,
           layout: layouts.featured
@@ -511,7 +511,7 @@ var SwitcherControls = function SwitcherControls(_ref) {
     ),
     wp.element.createElement(
       PanelBody,
-      { title: __("Reset Layout", "bpblocks") },
+      { title: __("Reset Layout", "blocks-playground") },
       wp.element.createElement(
         PanelRow,
         null,
@@ -614,13 +614,13 @@ var ResetControls = function ResetControls(_ref) {
       { isLink: true, isDestructive: true, onClick: function onClick() {
           return setState({ isOpen: true });
         } },
-      __("Reset Layout", "bpblocks")
+      __("Reset Layout", "blocks-playground")
     ),
     isOpen && wp.element.createElement(
       Modal,
       {
         className: "layout-switcher-reset",
-        title: __("Warning!", "bpblocks"),
+        title: __("Warning!", "blocks-playground"),
         onRequestClose: function onRequestClose() {
           return setState({ isOpen: false });
         }
@@ -628,11 +628,11 @@ var ResetControls = function ResetControls(_ref) {
       wp.element.createElement(
         "p",
         null,
-        __("This action will remove all blocks", "bpblocks"),
+        __("This action will remove all blocks", "blocks-playground"),
         wp.element.createElement(
           "strong",
           null,
-          __("This can be undone before leaving the page with the Undo option.", "bpblocks")
+          __("This can be undone before leaving the page with the Undo option.", "blocks-playground")
         )
       ),
       wp.element.createElement(
@@ -648,7 +648,7 @@ var ResetControls = function ResetControls(_ref) {
               setState({ isOpen: false });
             }
           },
-          __("Reset Layout", "bpblocks")
+          __("Reset Layout", "blocks-playground")
         )
       )
     )

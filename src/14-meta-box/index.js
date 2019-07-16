@@ -16,25 +16,25 @@ const { TextControl, PanelBody } = wp.components;
  * Register example block
  */
 export default registerBlockType(
-    'bpblocks/meta-box',
+    'blocks-playground/meta-box',
     {
-        title: __( 'Example - Meta Box', 'bpblocks' ),
-        description: __( 'An example of how to build a block with a meta box field.', 'bpblocks'),
+        title: __( 'Example - Meta Box', 'blocks-playground' ),
+        description: __( 'An example of how to build a block with a meta box field.', 'blocks-playground'),
         category: 'common',
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
         },         
         keywords: [
-            __( 'Meta', 'bpblocks' ),
-            __( 'Custom field', 'bpblocks' ),
-            __( 'Box', 'bpblocks' ),
+            __( 'Meta', 'blocks-playground' ),
+            __( 'Custom field', 'blocks-playground' ),
+            __( 'Box', 'blocks-playground' ),
         ],
         attributes: {
             text: {
                 type: 'string',
                 source: 'meta',
-                meta: 'bpblocks_gb_metabox',
+                meta: 'blocks-playground_gb_metabox',
             },
         },
         edit: props => {
@@ -43,20 +43,20 @@ export default registerBlockType(
                 <InspectorControls>
                     <PanelBody>
                         <TextControl
-                            label={ __( 'Meta box', 'bpblocks' ) }
+                            label={ __( 'Meta box', 'blocks-playground' ) }
                             value={ text }
                             onChange={ text => setAttributes( { text } ) }
                         />
                     </PanelBody>
                 </InspectorControls>,                
                 <div className={ className } >
-                    <p>{ __( 'Check the meta', 'bpblocks' ) }</p>
+                    <p>{ __( 'Check the meta', 'blocks-playground' ) }</p>
                 </div>
             ];
         },
         save: props => {
             return (
-                <p>{ __( 'Check the meta', 'bpblocks' ) }</p>
+                <p>{ __( 'Check the meta', 'blocks-playground' ) }</p>
             );
         },
     },
