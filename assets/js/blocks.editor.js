@@ -3497,7 +3497,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__dynamic__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__01_gallery__ = __webpack_require__(85);
 /**
- * Import example blocks
+ * Bootstrap block JS
  */
 
 
@@ -3528,7 +3528,7 @@ var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
 var Spinner = wp.components.Spinner;
 var withSelect = wp.data.withSelect;
-
+//blocks-playground/dynamic
 
 /* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType('blocks-playground/dynamic', {
     title: __('Some Example - Dynamic Block', 'blocks-playground'),

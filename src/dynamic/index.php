@@ -2,6 +2,8 @@
 
 namespace Gutenberg_Courses\Example_Block\Blocks\Dynamic;
 
+echo "[1]";
+
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
 /**
@@ -29,6 +31,9 @@ function register_dynamic_block() {
  * Server rendering for /blocks/examples/12-dynamic
  */
 function render_dynamic_block() {
+
+	echo "HEsssgLLO";
+
 	$recent_posts = wp_get_recent_posts( [
 		'numberposts' => 3,
 		'post_status' => 'publish',

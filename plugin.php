@@ -12,59 +12,56 @@
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  */
 
-namespace Adv_Gutenberg_Courses\Example_Blocks;
-
 //  Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-/**
- * Gets this plugin's absolute directory path.
- *
- * @since  2.1.0
- * @ignore
- * @access private
- *
- * @return string
- */
-function _get_plugin_directory() {
-	return __DIR__;
-}
+class WPGO_Blocks_Playground {
+	
+	protected $module_roots;
 
-/**
- * Gets this plugin's URL.
- *
- * @since  2.1.0
- * @ignore
- * @access private
- *
- * @return string
- */
-function _get_plugin_url() {
-	static $plugin_url;
+	/* Main class constructor. */
+	public function __construct($module_roots) {
 
-	if ( empty( $plugin_url ) ) {
-		$plugin_url = plugins_url( null, __FILE__ );
+		$this->module_roots = $module_roots;
+		$this->bootstrap();
+
+		// Add custom block category
+		add_filter( 'block_categories', function( $categories, $post ) {
+			return array_merge(
+				$categories,
+				[
+					[
+						'slug' => 'blocks-playground',
+						'title' => __( 'Blocks Playground', 'blocks-playground' ),
+					],
+				]
+			);
+		}, 10, 2 );
 	}
 
-	return $plugin_url;
-}
+	/* Bootstrap plugin. */
+	public function bootstrap() {
 
+		$root = $this->module_roots['dir'];
+		$path = $root . 'classes/bootstrap.php';
 
+		// if ( ss_fs()->is__premium_only() ) {
+		// 	$tmp = $root . 'modules/classes/bootstrap.php';
+		// 	if ( file_exists( $tmp ) ) {
+		// 			$path = $tmp;
+		// 	}
+		// }
 
-// Enqueue JS and CSS
-include __DIR__ . '/lib/register-scripts.php';
+		require_once $path;
+		new WPGO_Blocks_Playground_BootStrap( $this->module_roots );
+	}
 
-// Register block categories
-include __DIR__ . '/lib/block-categories.php';
+} /* End class definition */
 
-// Setup Global Block Setting Options Setting
-include __DIR__ . '/lib/wp-options.php';
-
-// Register REST API Endpoint
-include __DIR__ . '/lib/rest-api-endpoint.php';
-
-// Register blocks server side
-include __DIR__ . '/lib/register-blocks.php';
-
-// Register any PHP block filters
-include __DIR__ . '/lib/block-filters.php';
+$module_roots = array(
+	'dir' => plugin_dir_path( __FILE__ ),
+	'pdir' => plugin_dir_url( __FILE__ ),
+	'uri' => plugins_url( '', __FILE__ ),
+	'file' => __FILE__
+);
+new WPGO_Blocks_Playground( $module_roots );	

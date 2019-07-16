@@ -1,5 +1,5 @@
 /**
- * Import example blocks
+ * Bootstrap block JS
  */
 import "./dynamic";
 import "./01-gallery";

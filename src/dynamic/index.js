@@ -11,14 +11,14 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const { Spinner } = wp.components;
 const { withSelect } = wp.data;
-
+                                 //blocks-playground/dynamic
 export default registerBlockType( 'blocks-playground/dynamic', {
         title: __( 'Some Example - Dynamic Block', 'blocks-playground'),
         description: __( 'A look at how to build a basic dynamic block.', 'blocks-playground'),
         icon: {
             background: 'rgba(254, 243, 224, 0.52)',
             src: icon,
-        },         
+        },
         category: 'blocks-playground',
         edit: withSelect( select => {
                 return {

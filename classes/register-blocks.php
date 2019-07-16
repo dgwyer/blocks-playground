@@ -1,5 +1,9 @@
 <?php
 
+// instead have PHP block code in same folder as JS
+return;
+
+
 namespace Adv_Gutenberg_Courses\Example_Blocks;
 
 add_action( 'init', __NAMESPACE__ . '\register_blocks', 40 );
