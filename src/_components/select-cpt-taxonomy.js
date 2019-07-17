@@ -1,3 +1,6 @@
+import classnames from 'classnames';
+import Select from 'react-select';
+
 //  Import core block libraries
 const { __ } = wp.i18n;
 const { InspectorControls } = wp.blockEditor;
@@ -31,14 +34,54 @@ export class SelectCptTaxonomy extends Component {
   componentDidMount() {
 
     // render dropdowns
+    this.fetchCPTs();
     this.fetchTaxonomies(null); // null is important here
+  }
+
+  // set the CPT dropdown options
+  fetchCPTs() {
+
+    const { block_post_type, block_taxonomy } = this.props;
+    const post_type_url = 'simple-sitemap/v1/post-types';
+
+    wp.apiFetch({ path: post_type_url, method: 'GET' }).then(
+      (data) => {
+
+        var post_types = [];
+        const entries = Object.entries(data);
+        for (const [key, value] of entries) {
+          const tmp = {
+            value: key,
+            label: value
+          };
+          post_types.push(tmp);
+        }
+
+        this.setState({
+          types: post_types
+        });
+        return data;
+      },
+      (err) => {
+        return err;
+      }
+    );
   }
 
   // set the taxonomy dropdown options
   fetchTaxonomies(newCPT) {
 
     const { setAttributes, block_post_type, block_taxonomy } = this.props;
-    const taxonomy_url = 'simple-sitemap/v1/post-type-taxonomies/post';
+
+    // use the cpt from attribute (component did mount) or from new value when cpt drop down changed
+    let current_post_type_arr;
+    if (newCPT) {
+      current_post_type_arr = newCPT;
+    } else {
+      current_post_type_arr = block_post_type;
+    }
+
+    const taxonomy_url = `simple-sitemap/v1/post-type-taxonomies/${current_post_type_arr}`;
 
     wp.apiFetch({ path: taxonomy_url, method: 'GET' }).then(
       (data) => {
@@ -90,16 +133,28 @@ export class SelectCptTaxonomy extends Component {
     );
   }
 
+  updatePostTypeValues(val) {
+    const { setAttributes } = this.props;
+    setAttributes({ block_post_type: val });
+    this.fetchTaxonomies(val);
+  }
+
   updateTaxonomyValues(val) {
     const { setAttributes } = this.props;
     setAttributes({ block_taxonomy: val });
   }
 
   render() {
-    const { block_taxonomy } = this.props;
+    const { setAttributes, block_post_type, block_taxonomy, multi = true, className } = this.props;
 
     return (
       <div className={this.state.wrapperClass}>
+        <SelectControl
+          value={block_post_type}
+          options={this.state.types}
+          onChange={(val) => this.updatePostTypeValues(val)}
+          help={this.state.taxonomy_select_disabled_help}
+        />
         <SelectControl
           value={block_taxonomy}
           options={this.state.taxonomies}

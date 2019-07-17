@@ -3,6 +3,7 @@
  */
 import icon from './icon';
 import './style.scss';
+import { SelectFAQPosts } from '../_components/select-faq-posts';
 
 /**
  * Internal block libraries
@@ -31,15 +32,19 @@ export default registerBlockType('blocks-playground/faqs', {
         src: icon,
     },
     category: 'blocks-playground',
-    edit: withSelect((select) => {
+    edit: withSelect( select => {
+
         return {
-            posts: select('core').getEntityRecords('postType', 'post', { per_page: 3 })
+            posts: select( 'core' ).getEntityRecords( 'postType', 'post', { per_page: 3 } )
         };
     })((props) => {
-        const { attributes: { page_depth }, posts, className, setAttributes, isSelected } = props;
+        const { attributes: { page_depth, faq_posts }, className, setAttributes, isSelected, posts } = props;
+
+        //return <div style={{width:'350px'}}><small><pre>{JSON.stringify(props)}</pre></small></div>;
+
         var markup;
 
-        if (!posts) {
+        if (!faq_posts) {
             markup = (
                 <Fragment>
                     {markup}
@@ -49,18 +54,19 @@ export default registerBlockType('blocks-playground/faqs', {
                     </p>
                 </Fragment>
             );
-        } else if (0 === posts.length) {
+        } else if (0 === faq_posts.length) {
             markup = (
                 <Fragment>
                     {markup}
-                    <p>{__('No Posts', 'blocks-playground')}</p>
+                    <p>{__('No FAQs found', 'blocks-playground')}</p>
                 </Fragment>
             );
         } else {
             markup = <Fragment>
                 <h3>FAQs Block!</h3>
+                {faq_posts}
                 <ul className={className}>
-                    {posts.map(post => {
+                    {/* {JSON.parse(faq_posts).map(post => {
                         return (
                             <li>
                                 <a className={className} href={post.link}>
@@ -68,7 +74,7 @@ export default registerBlockType('blocks-playground/faqs', {
                                 </a>
                             </li>
                         );
-                    })}
+                    })} */}
                 </ul>
             </Fragment>;
         }
@@ -76,29 +82,29 @@ export default registerBlockType('blocks-playground/faqs', {
         return (
             <Fragment>
                 <InspectorControls>
-                    <PanelBody title={__('Page Settings', 'simple-sitemap')} initialOpen={false}>
+                    <PanelBody title={__('FAQ Settings', 'simple-sitemap')} initialOpen={true}>
                         <PanelRow className="simple-sitemap">
-                            <p>Affects sitemap pages only.</p>
+                            <SelectFAQPosts setAttributes={setAttributes} faq_posts={faq_posts} />
                         </PanelRow>
-						<PanelRow className="simple-sitemap">
-							<TextControl
-								type="number"
-								label="Page indentation"
-								min="0"
-								max="5"
-								help="Leave at zero for auto-depth"
-								value={page_depth}
-								onChange={(value) => { setAttributes({ page_depth: value }); }}
-							/>
-						</PanelRow>
+                        <PanelRow className="simple-sitemap">
+                            <TextControl
+                                type="number"
+                                label="Page indentation"
+                                min="0"
+                                max="5"
+                                help="Leave at zero for auto-depth"
+                                value={page_depth}
+                                onChange={(value) => { setAttributes({ page_depth: value }); }}
+                            />
+                        </PanelRow>                        
                     </PanelBody>
                 </InspectorControls>
-                Page depth: {page_depth}
-                {markup}
+                Posts: {JSON.stringify(posts)}
+                FAQs: {JSON.stringify(faq_posts)}
+                {markup}                
             </Fragment>
         );
-    }) // end withAPIData
-    , // end edit
+    }),
     save() {
         // Rendering in PHP
         return null;

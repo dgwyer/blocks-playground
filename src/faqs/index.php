@@ -29,6 +29,10 @@ function register_dynamic_block() {
 				'page_depth' => [
 					'type' => 'number',
 					'default' => 0
+				],
+				'faq_posts'  => [
+					'type'  => 'string',
+					'default' => '[]'
 				]
 		]
 	] );
