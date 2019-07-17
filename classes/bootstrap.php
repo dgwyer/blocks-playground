@@ -23,6 +23,10 @@ class WPGO_Blocks_Playground_BootStrap {
 		require_once( $root . 'classes/cpt.php' );
 		new WPGO_Blocks_Playground_CPT($this->module_roots);
 
+		// register endpoints
+		require_once( $root . 'classes/rest-api-endpoints.php' );
+		new WPGO_Custom_Blocks_Playground_Endpoints($this->module_roots);
+		
  		// bootstrap block PHP
 		require_once( $root . 'src/index.php' );
 		new WPGO_Blocks_Playground_BootStrap_PHP($this->module_roots);
