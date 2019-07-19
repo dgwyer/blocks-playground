@@ -1,3 +1,8 @@
+.wp-block-blocks-playground-gallery.column img {
+  height: auto; }
+
+.wp-block-blocks-playground-gallery.row img {
+  height: 100%; }
 .wp-block-blocks-playground-dynamic li {
   list-style-position: inside; }
 

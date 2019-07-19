@@ -28,7 +28,7 @@ class WPGO_Blocks_Playground_BootStrap {
 		new WPGO_Custom_Blocks_Playground_Endpoints($this->module_roots);
 		
  		// bootstrap block PHP
-		require_once( $root . 'src/index.php' );
+		require_once( $root . 'src/__index.php' );
 		new WPGO_Blocks_Playground_BootStrap_PHP($this->module_roots);
 
     // Bootstrap block PHP

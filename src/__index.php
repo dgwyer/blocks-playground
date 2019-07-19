@@ -19,7 +19,8 @@ class WPGO_Blocks_Playground_BootStrap_PHP {
     // Bootstrap blocks PHP
     require_once $root . 'src/dynamic/index.php';
 		require_once $root . 'src/shortcode/index.php';
-    require_once $root . 'src/faqs/index.php';		
+    require_once $root . 'src/faqs/index.php';
+    require_once $root . 'src/faqs1/index.php';
 
     // // Enqueue JS and CSS
     // require_once $root . '/classes/register-scripts.php';

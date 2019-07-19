@@ -81,7 +81,7 @@ class WPGO_Blocks_Playground_CPT {
 				//'excerpt'
 			),
 			'labels'              => array(
-				'name'               => __( 'Flexible FAQs', 'wpgo-flexible-faqs' ),
+				'name'               => __( 'FAQ CPT (test)', 'wpgo-flexible-faqs' ),
 				'all_items'          => __( 'All FAQs', 'wpgo-flexible-faqs' ),
 				'singular_name'      => __( 'FAQ', 'wpgo-flexible-faqs' ),
 				'add_new'            => __( 'Add New', 'wpgo-flexible-faqs' ),

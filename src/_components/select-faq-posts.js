@@ -104,7 +104,10 @@ export class SelectFAQPosts extends Component {
 
   updateSelect(val) {
 
-    setAttributes({ faq_posts: JSON.stringify(val) });
+    const { setAttributes } = this.props;
+
+    setAttributes({ faq_content, faq_posts: JSON.stringify(val) });
+
 
     // this.setState({ loading: true });
 
@@ -159,7 +162,7 @@ export class SelectFAQPosts extends Component {
         <Select
           value={JSON.parse(faq_posts)}
           isMulti={multi}
-          onChange={(val) => setAttributes({ faq_posts: JSON.stringify(val) })}
+          onChange={(val) => this.updateSelect(val)}
           options={this.state.posts}
           className="react-select-container"
           classNamePrefix="react-select"

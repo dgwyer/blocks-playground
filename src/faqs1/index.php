@@ -1,6 +1,6 @@
 <?php
 
-namespace Gutenberg_Courses\Example_Block\Blocks\FAQs;
+namespace Gutenberg_Courses\Example_Block\Blocks\FAQs1;
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
 /**
@@ -13,7 +13,7 @@ add_action( 'plugins_loaded', __NAMESPACE__ . '\register_dynamic_block' );
 function register_dynamic_block() {
 
 	// Hook server side rendering into render callback
-	register_block_type( 'blocks-playground/faqs', [
+	register_block_type( 'blocks-playground/faqs1', [
 		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
 		'attributes'      => [
 			'some_string' => [
@@ -23,18 +23,17 @@ function register_dynamic_block() {
 			'some_array'  => [
 					'type'  => 'array',
 					'items' => [
-							'type' => 'string'
+							'type' => 'string',
 					],
-					'default' => []
-			],
-			'page_depth' => [
+				],
+				'page_depth' => [
 					'type' => 'number',
 					'default' => 0
-			],
-			'faq_posts'  => [
+				],
+				'faq_posts'  => [
 					'type'  => 'string',
 					'default' => '[]'
-			]
+				]
 		]
 	] );
 }
@@ -42,7 +41,7 @@ function register_dynamic_block() {
 /**
  * Server rendering for /blocks/examples/12-dynamic
  */
-function render_dynamic_block($attr) {
+function render_dynamic_block() {
 
 	return "<h3>FAQs Block!</h3>";
 

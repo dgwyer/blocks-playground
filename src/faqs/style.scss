@@ -1,12 +1,7 @@
-.wp-block-blocks-playground-dynamic {
+.wp-block-blocks-playground-gallery.column img {
+    height: auto;
+}
 
-  li {
-    list-style-position: inside;
-  }
-
-  .spinner {
-    float: none;
-    margin: 6px 2px 10px 0;
-  }
-
+.wp-block-blocks-playground-gallery.row img {
+    height: 100%;
 }

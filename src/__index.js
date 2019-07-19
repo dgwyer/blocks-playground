@@ -2,7 +2,8 @@
  * Bootstrap and register blocks via JS (loaded via webpack)
  */
 
-import "./faqs"; 
+import "./faqs";
+import "./faqs1";
 import "./dynamic";
 import "./shortcode";
 import "./01-gallery";
