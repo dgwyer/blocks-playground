@@ -4,11 +4,6 @@
 import icon from "./icon";
 import style from "./style.scss";
 
-/**
- * Block libraries
- */
-
-const { withInstanceId } = wp.compose;
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { registerBlockType, getBlockAttributes } = wp.blocks;
@@ -23,6 +18,7 @@ const {
   Toolbar,
   PanelBody,
   PanelRow,
+  TextControl,  
   RadioControl,
   ToggleControl
 } = wp.components;
@@ -47,26 +43,32 @@ export default registerBlockType("blocks-playground/faqs", {
   edit: props => {
 
     const {
-      attributes: { images, direction, isLightboxEnabled },
+      attributes: { page_depth },
       className,
       setAttributes
     } = props;
 
-    const attr = getBlockAttributes();
-
     return (
       <Fragment>
         <InspectorControls>
-          <PanelBody title={__("Gallery Settings", "blocks-playground")} initialOpen={true}>
-            <PanelRow>
-              <div>Add controls here...</div>
-            </PanelRow>
+          <PanelBody title={__("General Settings", "blocks-playground")} initialOpen={true}>
+          <PanelRow>
+							<TextControl
+								type="number"
+								label="Page indentation"
+								min="0"
+								max="5"
+								help="Leave at zero for auto-depth"
+								value={page_depth}
+								onChange={(value) => { setAttributes({ page_depth: parseInt(value) }); }}
+							/>
+						</PanelRow>
           </PanelBody>
         </InspectorControls>
         <div className='ffaq'>
+        {page_depth}
           {JSON.stringify(props.attributes)}
           Flexible FAQ Container
-          <FAQ />
         </div>
       </Fragment>
     );

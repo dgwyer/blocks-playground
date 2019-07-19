@@ -85,7 +85,6 @@ msgid "Lightbox"
 msgstr ""
 
 #: src/01-gallery/index.js:87
-#: src/faqs/index.js:60
 msgid "Gallery Settings"
 msgstr ""
 
@@ -102,39 +101,46 @@ msgid "A look at how to build a basic dynamic block."
 msgstr ""
 
 #: src/dynamic/index.js:32
-#: src/shortcode/index.js:32
+#: src/shortcode/index.js:56
 msgid "Loading Posts"
 msgstr ""
 
 #: src/dynamic/index.js:37
-#: src/shortcode/index.js:37
+#: src/shortcode/index.js:61
 msgid "No Posts"
 msgstr ""
 
-#: src/faqs/index.js:35
+#: src/faqs/index.js:31
 msgid "FAQs (NEW)"
 msgstr ""
 
-#: src/faqs/index.js:36
+#: src/faqs/index.js:32
 msgid "FAQs rendered via React on frontend"
 msgstr ""
 
+#: src/faqs/index.js:36
 #: src/faqs/index.js:40
+#: src/faqs/index.js:41
 #: src/faqs/index.js:39
 #: src/faqs1/index.js:28
 msgid "FAQs"
 msgstr ""
 
-#: src/faqs/index.js:41
+#: src/faqs/index.js:37
 msgid "WPGO"
 msgstr ""
 
-#: src/faqs/index.js:42
+#: src/faqs/index.js:38
 msgid "Frequently Asked Questions"
 msgstr ""
 
+#: src/faqs/index.js:54
+#: src/shortcode/index.js:66
+msgid "General Settings"
+msgstr ""
+
 #: src/faqs1/index.js:29
-#: src/shortcode/index.js:17
+#: src/shortcode/index.js:32
 msgid "Simple shortcode example."
 msgstr ""
 
@@ -142,6 +148,6 @@ msgstr ""
 msgid "FAQ Settings"
 msgstr ""
 
-#: src/shortcode/index.js:16
+#: src/shortcode/index.js:31
 msgid "Shortcode Example #1"
 msgstr ""

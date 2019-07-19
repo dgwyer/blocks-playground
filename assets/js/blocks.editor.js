@@ -10969,11 +10969,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-/**
- * Block libraries
- */
-
-var withInstanceId = wp.compose.withInstanceId;
 var __ = wp.i18n.__;
 var Fragment = wp.element.Fragment;
 var _wp$blocks = wp.blocks,
@@ -10989,6 +10984,7 @@ var _wp$components = wp.components,
     Toolbar = _wp$components.Toolbar,
     PanelBody = _wp$components.PanelBody,
     PanelRow = _wp$components.PanelRow,
+    TextControl = _wp$components.TextControl,
     RadioControl = _wp$components.RadioControl,
     ToggleControl = _wp$components.ToggleControl;
 
@@ -11006,15 +11002,10 @@ var _wp$components = wp.components,
     align: ["full", "wide"]
   },
   edit: function edit(props) {
-    var _props$attributes = props.attributes,
-        images = _props$attributes.images,
-        direction = _props$attributes.direction,
-        isLightboxEnabled = _props$attributes.isLightboxEnabled,
+    var page_depth = props.attributes.page_depth,
         className = props.className,
         setAttributes = props.setAttributes;
 
-
-    var attr = getBlockAttributes();
 
     return wp.element.createElement(
       Fragment,
@@ -11024,24 +11015,30 @@ var _wp$components = wp.components,
         null,
         wp.element.createElement(
           PanelBody,
-          { title: __("Gallery Settings", "blocks-playground"), initialOpen: true },
+          { title: __("General Settings", "blocks-playground"), initialOpen: true },
           wp.element.createElement(
             PanelRow,
             null,
-            wp.element.createElement(
-              "div",
-              null,
-              "Add controls here..."
-            )
+            wp.element.createElement(TextControl, {
+              type: "number",
+              label: "Page indentation",
+              min: "0",
+              max: "5",
+              help: "Leave at zero for auto-depth",
+              value: page_depth,
+              onChange: function onChange(value) {
+                setAttributes({ page_depth: parseInt(value) });
+              }
+            })
           )
         )
       ),
       wp.element.createElement(
         "div",
         { className: "ffaq" },
+        page_depth,
         __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(props.attributes),
-        "Flexible FAQ Container",
-        wp.element.createElement(FAQ, null)
+        "Flexible FAQ Container"
       )
     );
   },
@@ -13077,9 +13074,12 @@ var icon = wp.element.createElement(
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__icon__ = __webpack_require__(190);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_scss__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__style_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__icon__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_scss__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_scss__);
+
 /**
  * Block dependencies
  */
@@ -13091,8 +13091,21 @@ var icon = wp.element.createElement(
  */
 var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
-var Spinner = wp.components.Spinner;
+var _wp$components = wp.components,
+    Spinner = _wp$components.Spinner,
+    IconButton = _wp$components.IconButton,
+    Toolbar = _wp$components.Toolbar,
+    PanelBody = _wp$components.PanelBody,
+    PanelRow = _wp$components.PanelRow,
+    TextControl = _wp$components.TextControl,
+    RadioControl = _wp$components.RadioControl,
+    ToggleControl = _wp$components.ToggleControl;
 var withSelect = wp.data.withSelect;
+var _wp$editor = wp.editor,
+    BlockControls = _wp$editor.BlockControls,
+    InspectorControls = _wp$editor.InspectorControls,
+    MediaUpload = _wp$editor.MediaUpload,
+    MediaPlaceholder = _wp$editor.MediaPlaceholder;
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (registerBlockType('blocks-playground/shortcode', {
@@ -13100,18 +13113,20 @@ var withSelect = wp.data.withSelect;
     description: __('Simple shortcode example.', 'blocks-playground'),
     icon: {
         background: 'rgba(254, 243, 224, 0.52)',
-        src: __WEBPACK_IMPORTED_MODULE_0__icon__["a" /* default */]
+        src: __WEBPACK_IMPORTED_MODULE_1__icon__["a" /* default */]
     },
     category: 'blocks-playground',
     edit: withSelect(function (select) {
         return {
             posts: select('core').getEntityRecords('postType', 'post', { per_page: 3 })
         };
-    })(function (_ref) {
-        var posts = _ref.posts,
-            className = _ref.className,
-            isSelected = _ref.isSelected,
-            setAttributes = _ref.setAttributes;
+    })(function (props) {
+        var page_depth = props.attributes.page_depth,
+            className = props.className,
+            posts = props.posts,
+            isSelected = props.isSelected,
+            setAttributes = props.setAttributes;
+
 
         if (!posts) {
             return wp.element.createElement(
@@ -13129,19 +13144,48 @@ var withSelect = wp.data.withSelect;
             );
         }
         return wp.element.createElement(
-            'ul',
-            { className: className },
-            posts.map(function (post) {
-                return wp.element.createElement(
-                    'li',
-                    null,
+            'div',
+            null,
+            wp.element.createElement(
+                InspectorControls,
+                null,
+                wp.element.createElement(
+                    PanelBody,
+                    { title: __("General Settings", "blocks-playground"), initialOpen: true },
                     wp.element.createElement(
-                        'a',
-                        { className: className, href: post.link },
-                        post.title.rendered
+                        PanelRow,
+                        null,
+                        wp.element.createElement(TextControl, {
+                            type: 'number',
+                            label: 'Page indentation',
+                            min: '0',
+                            max: '5',
+                            help: 'Leave at zero for auto-depth',
+                            value: page_depth,
+                            onChange: function onChange(value) {
+                                setAttributes({ page_depth: parseInt(value) });
+                            }
+                        })
                     )
-                );
-            })
+                )
+            ),
+            page_depth,
+            __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(props.attributes),
+            wp.element.createElement(
+                'ul',
+                { className: className },
+                posts.map(function (post) {
+                    return wp.element.createElement(
+                        'li',
+                        null,
+                        wp.element.createElement(
+                            'a',
+                            { className: className, href: post.link },
+                            post.title.rendered
+                        )
+                    );
+                })
+            )
         );
     }) // end withAPIData
     , // end edit

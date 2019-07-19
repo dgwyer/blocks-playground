@@ -19,7 +19,13 @@ function register_dynamic_block() {
 
 	// Hook server side rendering into render callback
 	register_block_type( 'blocks-playground/shortcode', [
-		'render_callback' => __NAMESPACE__ . '\render_dynamic_block'		
+		'render_callback' => __NAMESPACE__ . '\render_dynamic_block',
+		'attributes'      => [
+			'page_depth' => [
+					'type' => 'number',
+					'default' => 0
+			]
+		]
 	] );
 
 }
