@@ -70,10 +70,11 @@ function render_dynamic_block($attr) {
 		var ffaq_{$args['id']} = {
 			page_depth: {$args['page_depth']}
 		};
-		console.log('Hello there!', faq_{$args['id']});  
+		console.log('Hello there!', ffaq_{$args['id']});  
 	</script>
 	JS;
 
+	echo "<div id='zx123'>Placeholder</div>";
 	echo "<div id='ffaq_" . $args['id'] . "' class='ffaq-container'>";
 	echo "<h3 id='ffaq-heading' data-id='" . $args['page_depth'] . "'>FAQs Block!</h3>";
 	echo $faqJS;

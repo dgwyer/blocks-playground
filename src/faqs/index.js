@@ -4,6 +4,8 @@
 import icon from "./icon";
 import style from "./style.scss";
 
+import { FlexibleFaqs } from "./components/flexible-faqs";
+
 const { __ } = wp.i18n;
 const { Fragment } = wp.element;
 const { registerBlockType, getBlockAttributes } = wp.blocks;
@@ -69,6 +71,7 @@ export default registerBlockType("blocks-playground/faqs", {
         {page_depth}
           {JSON.stringify(props.attributes)}
           Flexible FAQ Container
+          <FlexibleFaqs />
         </div>
       </Fragment>
     );
