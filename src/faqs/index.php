@@ -75,10 +75,9 @@ function render_dynamic_block($attr) {
 	JS;
 
 	echo "<div id='zx123'>Placeholder</div>";
-	echo "<div id='ffaq_" . $args['id'] . "' class='ffaq-container'>";
 	echo "<h3 id='ffaq-heading' data-id='" . $args['page_depth'] . "'>FAQs Block!</h3>";
 	echo $faqJS;
-	echo "</div>";
+	echo "<div id='ffaq_" . $args['id'] . "' class='ffaq-container'></div>";
 
 	echo "<pre>";
 	print_r($attr);

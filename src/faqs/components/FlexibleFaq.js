@@ -1,3 +1,4 @@
+/** @jsx jsx */
 //  Import core block libraries
 //const { __ } = wp.i18n;
 // const {
@@ -6,8 +7,10 @@
 //   SelectControl
 // } = wp.components;
 //const { Component, Fragment } = wp.element;
+import { css, jsx } from "@emotion/core";
 
-export default class FlexibleFaqs extends React.Component {
+// render a single faq
+export default class FlexibleFaq extends React.Component {
 
   constructor(props) {
     super(); // or super(props); ??
@@ -23,16 +26,25 @@ export default class FlexibleFaqs extends React.Component {
   }
 
   // get post types to populate select box
-  // componentDidMount() {
+  componentDidMount() {
+    
+    console.log('Loaded!');
 
   //   // render dropdowns
-  // }
+  }
 
   render() {
     const { block_taxonomy } = this.props;
+    const bg = "pink";
 
     return (
-      <div className="ffaq">
+      <div
+        css={css`
+          background-color: ${bg};
+          color: #fff;
+          
+        `}
+      >
         I am an FAQ!
       </div>
     );

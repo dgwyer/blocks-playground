@@ -81,18 +81,18 @@ class WPGO_Blocks_Playground_CPT {
 				//'excerpt'
 			),
 			'labels'              => array(
-				'name'               => __( 'FAQ CPT (test)', 'wpgo-flexible-faqs' ),
-				'all_items'          => __( 'All FAQs', 'wpgo-flexible-faqs' ),
-				'singular_name'      => __( 'FAQ', 'wpgo-flexible-faqs' ),
-				'add_new'            => __( 'Add New', 'wpgo-flexible-faqs' ),
-				'add_new_item'       => __( 'Add New FAQ', 'wpgo-flexible-faqs' ),
-				'edit_item'          => __( 'Edit FAQ', 'wpgo-flexible-faqs' ),
-				'new_item'           => __( 'New FAQ', 'wpgo-flexible-faqs' ),
-				'view_item'          => __( 'View FAQ', 'wpgo-flexible-faqs' ),
-				'search_items'       => __( 'Search FAQs', 'wpgo-flexible-faqs' ),
-				'not_found'          => __( 'No FAQs Found. Now\'s a good time to create you\'re first one!', 'wpgo-flexible-faqs' ),
-				'not_found_in_trash' => __( 'No FAQs Found In Trash', 'wpgo-flexible-faqs' ),
-				'attributes'         => __( 'FAQ Attributes', 'wpgo-flexible-faqs' ),
+				'name'               => __( 'FAQ CPT (test)', 'flexible-faqs' ),
+				'all_items'          => __( 'All FAQs', 'flexible-faqs' ),
+				'singular_name'      => __( 'FAQ', 'flexible-faqs' ),
+				'add_new'            => __( 'Add New', 'flexible-faqs' ),
+				'add_new_item'       => __( 'Add New FAQ', 'flexible-faqs' ),
+				'edit_item'          => __( 'Edit FAQ', 'flexible-faqs' ),
+				'new_item'           => __( 'New FAQ', 'flexible-faqs' ),
+				'view_item'          => __( 'View FAQ', 'flexible-faqs' ),
+				'search_items'       => __( 'Search FAQs', 'flexible-faqs' ),
+				'not_found'          => __( 'No FAQs Found. Now\'s a good time to create you\'re first one!', 'flexible-faqs' ),
+				'not_found_in_trash' => __( 'No FAQs Found In Trash', 'flexible-faqs' ),
+				'attributes'         => __( 'FAQ Attributes', 'flexible-faqs' ),
 			)
 		);
 
@@ -115,17 +115,17 @@ class WPGO_Blocks_Playground_CPT {
 			'sort'          => true,
 			'rewrite'       => array( 'slug' => 'faqs' ),
 			'labels'        => array(
-				'name'              => __( 'FAQ Topics', 'wpgo-flexible-faqs' ),
-				'singular_name'     => __( 'FAQ Topic', 'wpgo-flexible-faqs' ),
-				'edit_item'         => __( 'Edit FAQ Topic', 'wpgo-flexible-faqs' ),
-				'update_item'       => __( 'Update FAQ', 'wpgo-flexible-faqs' ),
-				'add_new_item'      => __( 'Add New Topic', 'wpgo-flexible-faqs' ),
-				'new_item_name'     => __( 'New FAQ Name', 'wpgo-flexible-faqs' ),
-				'all_items'         => __( 'All FAQs', 'wpgo-flexible-faqs' ),
-				'search_items'      => __( 'Search FAQs', 'wpgo-flexible-faqs' ),
-				'parent_item'       => __( 'Parent Genre', 'wpgo-flexible-faqs' ),
-				'parent_item_colon' => __( 'Parent Genre:', 'wpgo-flexible-faqs' ),
-				'not_found' => __( 'No FAQ topics found. Now\'s a good time to create you\'re first one!', 'wpgo-flexible-faqs' ),
+				'name'              => __( 'FAQ Topics', 'flexible-faqs' ),
+				'singular_name'     => __( 'FAQ Topic', 'flexible-faqs' ),
+				'edit_item'         => __( 'Edit FAQ Topic', 'flexible-faqs' ),
+				'update_item'       => __( 'Update FAQ', 'flexible-faqs' ),
+				'add_new_item'      => __( 'Add New Topic', 'flexible-faqs' ),
+				'new_item_name'     => __( 'New FAQ Name', 'flexible-faqs' ),
+				'all_items'         => __( 'All FAQs', 'flexible-faqs' ),
+				'search_items'      => __( 'Search FAQs', 'flexible-faqs' ),
+				'parent_item'       => __( 'Parent Genre', 'flexible-faqs' ),
+				'parent_item_colon' => __( 'Parent Genre:', 'flexible-faqs' ),
+				'not_found' => __( 'No FAQ topics found. Now\'s a good time to create you\'re first one!', 'flexible-faqs' ),
 			)
 		);
 
@@ -142,14 +142,14 @@ class WPGO_Blocks_Playground_CPT {
 
 		$cols = array(
 			'cb'            => '<input type="checkbox">',
-			'title'         => __( 'Title', 'wpgo-flexible-faqs' ),
-			'faq-number'    => __( 'FAQs', 'wpgo-flexible-faqs' ),
-			'faq-author'    => __( 'Author', 'wpgo-flexible-faqs' ),
-			//'company'       => __( 'Company', 'wpgo-flexible-faqs' ),
-			'image'         => __( 'Image', 'wpgo-flexible-faqs' ),
-			'topic'         => __( 'FAQ Topic', 'wpgo-flexible-faqs' ),
-			'id'            => __( 'ID', 'wpgo-flexible-faqs' ),
-			'date'          => __( 'Date', 'wpgo-flexible-faqs' )
+			'title'         => __( 'Title', 'flexible-faqs' ),
+			'faq-number'    => __( 'FAQs', 'flexible-faqs' ),
+			'faq-author'    => __( 'Author', 'flexible-faqs' ),
+			//'company'       => __( 'Company', 'flexible-faqs' ),
+			'image'         => __( 'Image', 'flexible-faqs' ),
+			'topic'         => __( 'FAQ Topic', 'flexible-faqs' ),
+			'id'            => __( 'ID', 'flexible-faqs' ),
+			'date'          => __( 'Date', 'flexible-faqs' )
 		);
 
 		return $cols;
@@ -181,19 +181,19 @@ class WPGO_Blocks_Playground_CPT {
 
 		$messages['wpgo_faq'] = array(
 			0  => '', // Unused. Messages start at index 1.
-			1  => sprintf( __( 'FAQ updated.', 'wpgo-flexible-faqs' ), esc_url( get_permalink( $post_ID ) ) ),
-			2  => __( 'Custom field updated.', 'wpgo-flexible-faqs' ),
-			3  => __( 'Custom field deleted.', 'wpgo-flexible-faqs' ),
-			4  => __( 'FAQ updated.', 'wpgo-flexible-faqs' ),
+			1  => sprintf( __( 'FAQ updated.', 'flexible-faqs' ), esc_url( get_permalink( $post_ID ) ) ),
+			2  => __( 'Custom field updated.', 'flexible-faqs' ),
+			3  => __( 'Custom field deleted.', 'flexible-faqs' ),
+			4  => __( 'FAQ updated.', 'flexible-faqs' ),
 			/* translators: %s: date and time of the revision */
-			5  => isset( $_GET['revision'] ) ? sprintf( __( 'FAQ restored to revision from %s', 'wpgo-flexible-faqs' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
-			6  => sprintf( __( 'FAQ published.', 'wpgo-flexible-faqs' ), esc_url( get_permalink( $post_ID ) ) ),
-			7  => __( 'FAQ saved.', 'wpgo-flexible-faqs' ),
-			8  => sprintf( __( 'FAQ submitted.', 'wpgo-flexible-faqs' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
-			9  => sprintf( __( 'FAQ scheduled for: %1$s.', 'wpgo-flexible-faqs' ),
+			5  => isset( $_GET['revision'] ) ? sprintf( __( 'FAQ restored to revision from %s', 'flexible-faqs' ), wp_post_revision_title( (int) $_GET['revision'], false ) ) : false,
+			6  => sprintf( __( 'FAQ published.', 'flexible-faqs' ), esc_url( get_permalink( $post_ID ) ) ),
+			7  => __( 'FAQ saved.', 'flexible-faqs' ),
+			8  => sprintf( __( 'FAQ submitted.', 'flexible-faqs' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+			9  => sprintf( __( 'FAQ scheduled for: %1$s.', 'flexible-faqs' ),
 				// translators: Publish box date format, see http://php.net/date
-				'<strong>' . date_i18n( __( 'M j, Y @ G:i', 'wpgo-flexible-faqs' ), strtotime( $post->post_date ) ) . '</strong>', esc_url( get_permalink( $post_ID ) ) ),
-			10 => sprintf( __( 'FAQ draft updated.', 'wpgo-flexible-faqs' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
+				'<strong>' . date_i18n( __( 'M j, Y @ G:i', 'flexible-faqs' ), strtotime( $post->post_date ) ) . '</strong>', esc_url( get_permalink( $post_ID ) ) ),
+			10 => sprintf( __( 'FAQ draft updated.', 'flexible-faqs' ), esc_url( add_query_arg( 'preview', 'true', get_permalink( $post_ID ) ) ) ),
 		);
 
 		return $messages;

@@ -1,18 +1,18 @@
 const { render } = wp.element;
 
 //import FrontendGallery from "./components/FrontendGallery";
-import FlexibleFaqs from "./components/flexible-faqs";
+import FlexibleFaq from "./components/FlexibleFaq";
 
 const ffaq_els = document.querySelectorAll('.ffaq-container');
 const element = <Welcome name="Sara" title="Mara"/>;
 
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
-  //return <FlexibleFaqs />;
+  //return <FlexibleFaq />;
 }
 
 console.log('ffaq_els: ', ffaq_els);
-console.log('FlexibleFaqs: ', FlexibleFaqs);
+console.log('FlexibleFaq: ', FlexibleFaq);
 
 ffaq_els.forEach((ffaq_el, index) => {
   const ffaq_id = ffaq_el.id;
@@ -34,7 +34,7 @@ ffaq_els.forEach((ffaq_el, index) => {
   // });
 
   render(
-    <FlexibleFaqs />,
-    document.querySelector('.ffaq-container')
+    <FlexibleFaq />,
+    ffaq_el //document.querySelector('.ffaq-container')
   );  
 });
