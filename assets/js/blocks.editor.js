@@ -9373,7 +9373,9 @@ var _wp$components = wp.components,
     align: ["full", "wide"]
   },
   edit: function edit(props) {
-    var page_depth = props.attributes.page_depth,
+    var _props$attributes = props.attributes,
+        page_depth = _props$attributes.page_depth,
+        q_padding = _props$attributes.q_padding,
         className = props.className,
         setAttributes = props.setAttributes;
 
@@ -9399,6 +9401,19 @@ var _wp$components = wp.components,
               value: page_depth,
               onChange: function onChange(value) {
                 setAttributes({ page_depth: parseInt(value) });
+              }
+            })
+          ),
+          wp.element.createElement(
+            PanelRow,
+            null,
+            wp.element.createElement(TextControl, {
+              type: "string",
+              label: "Q Padding",
+              help: "Padding for the question",
+              value: q_padding,
+              onChange: function onChange(value) {
+                setAttributes({ q_padding: value });
               }
             })
           )

@@ -45,7 +45,7 @@ export default registerBlockType("blocks-playground/faqs", {
   edit: props => {
 
     const {
-      attributes: { page_depth },
+      attributes: { page_depth, q_padding },
       className,
       setAttributes
     } = props;
@@ -63,6 +63,15 @@ export default registerBlockType("blocks-playground/faqs", {
 								help="Leave at zero for auto-depth"
 								value={page_depth}
 								onChange={(value) => { setAttributes({ page_depth: parseInt(value) }); }}
+							/>
+						</PanelRow>
+            <PanelRow>
+							<TextControl
+								type="string"
+								label="Q Padding"
+								help="Padding for the question"
+								value={q_padding}
+								onChange={(value) => { setAttributes({ q_padding: value }); }}
 							/>
 						</PanelRow>
           </PanelBody>
