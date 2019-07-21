@@ -21,11 +21,14 @@ function register_dynamic_block() {
 				'default' => 'default string'
 			],
 			'some_array'  => [
-					'type'  => 'array',
-					'items' => [
-							'type' => 'string'
-					],
-					'default' => []
+				'type'  => 'array',
+				'items' => [
+						'type' => 'string'
+				],
+				'default' => [
+					"5px", // padding
+					"3px" // margin
+				]	
 			],
 			'page_depth' => [
 					'type' => 'number',
@@ -33,6 +36,10 @@ function register_dynamic_block() {
 			],
 			'q_padding' => [
 				'type'    => 'string',
+				'default' => '0'
+			],
+			'faq_styles' => [
+				'type'    => 'object',
 				'default' => '0'
 			],
 			'faq_posts'  => [
@@ -52,7 +59,8 @@ function render_dynamic_block($attr) {
 	$args = shortcode_atts( array(
 		'id' => uniqid(), // unique identifier to avoid conflicts if using multiple faqs on the same page. e.g. 5d026c6168954
 		'page_depth' => 0,
-		'q_padding' => '0'
+		'q_padding' => '0',
+		'some_array' => []
 
 		// following attributes don't have block support yet
 
@@ -63,6 +71,7 @@ function render_dynamic_block($attr) {
 	
 	//$args['page_depth'] = tag_escape( $args['container_tag'] );
 	$args['q_padding'] = esc_attr( $args['q_padding'] );
+	$args['some_array'] = json_encode($args['some_array']); // convert PHP attribute to JS array
 
 	// Start output buffering (so that existing content in the [simple-sitemap] post doesn't get shoved to the bottom of the post
 	ob_start();
@@ -75,16 +84,17 @@ function render_dynamic_block($attr) {
 	<script>
 		var ffaq_{$args['id']} = {
 			page_depth: {$args['page_depth']},
-			q_padding: '{$args['q_padding']}'			
+			q_padding: '{$args['q_padding']}',
+			some_array: {$args['some_array']}
 		};
-		console.log('Hello there!', ffaq_{$args['id']});  
+		console.log('Hello there!', ffaq_{$args['id']});
+		console.log( 'ARRSTR: ', {$args['some_array']} );
 	</script>
 	JS;
+	$faqJS = trim(preg_replace('/\s+/', ' ', $faqJS));
 
-	echo "<div id='zx123'>Placeholder</div>";
-	echo "<h3 id='ffaq-heading' data-id='" . $args['page_depth'] . "'>FAQs Block!</h3>";
-	echo $faqJS;
-	echo "<div id='ffaq_" . $args['id'] . "' class='ffaq-container'></div>";
+	echo "<h3 id='ffaq-heading' data-id='" . $args['page_depth'] . "'>FAQs Block!</h3>\n";
+	echo "<div id='ffaq_" . $args['id'] . "' class='ffaq-container'>\n" . $faqJS . "\n</div>";
 
 	echo "<pre>";
 	print_r($attr);

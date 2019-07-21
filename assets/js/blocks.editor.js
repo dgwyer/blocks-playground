@@ -2590,7 +2590,7 @@ module.exports = { "default": __webpack_require__(137), __esModule: true };
 
 
 
-var _templateObject = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_taggedTemplateLiteral___default()(["\n          background-color: ", ";\n          color: #fff;\n          \n        "], ["\n          background-color: ", ";\n          color: #fff;\n          \n        "]);
+var _templateObject = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_taggedTemplateLiteral___default()(["\n          background-color: ", ";\n          color: #fff;\n          padding: ", "\n        "], ["\n          background-color: ", ";\n          color: #fff;\n          padding: ", "\n        "]);
 
 /** @jsx jsx */
 //  Import core block libraries
@@ -2633,21 +2633,21 @@ var FlexibleFaq = function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
 
-      console.log('Loaded!');
+      console.log('FlexibleFaq component mounted');
 
       //   // render dropdowns
     }
   }, {
     key: "render",
     value: function render() {
-      var block_taxonomy = this.props.block_taxonomy;
+      var some_array = this.props.some_array;
 
       var bg = "pink";
 
       return Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
         "div",
         {
-          css: Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["c" /* css */])(_templateObject, bg)
+          css: Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["c" /* css */])(_templateObject, bg, some_array[0])
         },
         "I am an FAQ!"
       );
@@ -9327,10 +9327,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__icon__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_scss__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__style_scss__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_FlexibleFaq__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__icon__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_scss__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__style_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__style_scss__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_FlexibleFaq__ = __webpack_require__(72);
+
 
 /**
  * Block dependencies
@@ -9367,7 +9370,7 @@ var _wp$components = wp.components,
   title: __("FAQs (NEW)", "blocks-playground"),
   description: __("FAQs rendered via React on frontend", "blocks-playground"),
   category: "blocks-playground",
-  icon: __WEBPACK_IMPORTED_MODULE_1__icon__["a" /* default */],
+  icon: __WEBPACK_IMPORTED_MODULE_2__icon__["a" /* default */],
   keywords: [__("FAQs", "blocks-playground"), __("WPGO", "blocks-playground"), __("Frequently Asked Questions", "blocks-playground")],
   supports: {
     align: ["full", "wide"]
@@ -9376,9 +9379,28 @@ var _wp$components = wp.components,
     var _props$attributes = props.attributes,
         page_depth = _props$attributes.page_depth,
         q_padding = _props$attributes.q_padding,
+        some_array = _props$attributes.some_array,
         className = props.className,
         setAttributes = props.setAttributes;
 
+
+    function updatePadding(padding) {
+
+      // @todo this should be a prop or come from PHP?
+      var styleIndex = 0;
+
+      console.log('New padding: ', padding);
+
+      //(value) => setState({ color: value.hex })
+
+      var newColors = [].concat(__WEBPACK_IMPORTED_MODULE_1_babel_runtime_helpers_toConsumableArray___default()(some_array));
+      newColors[styleIndex] = padding;
+      console.log('NEW: ', newColors);
+
+      setAttributes({ some_array: newColors });
+    }
+
+    console.log('some_array: ', some_array);
 
     return wp.element.createElement(
       Fragment,
@@ -9411,10 +9433,8 @@ var _wp$components = wp.components,
               type: "string",
               label: "Q Padding",
               help: "Padding for the question",
-              value: q_padding,
-              onChange: function onChange(value) {
-                setAttributes({ q_padding: value });
-              }
+              value: some_array[0],
+              onChange: updatePadding
             })
           )
         )
@@ -9425,7 +9445,8 @@ var _wp$components = wp.components,
         page_depth,
         __WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_json_stringify___default()(props.attributes),
         "Flexible FAQ Container",
-        wp.element.createElement(__WEBPACK_IMPORTED_MODULE_3__components_FlexibleFaq__["a" /* default */], null)
+        wp.element.createElement(__WEBPACK_IMPORTED_MODULE_4__components_FlexibleFaq__["a" /* default */], { some_array: some_array }),
+        ", />"
       )
     );
   },
@@ -13619,6 +13640,185 @@ var index = (function () {
 /* harmony default export */ __webpack_exports__["a"] = (index);
 
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(130)))
+
+/***/ }),
+/* 184 */,
+/* 185 */,
+/* 186 */,
+/* 187 */,
+/* 188 */,
+/* 189 */,
+/* 190 */,
+/* 191 */,
+/* 192 */,
+/* 193 */,
+/* 194 */,
+/* 195 */,
+/* 196 */,
+/* 197 */,
+/* 198 */,
+/* 199 */,
+/* 200 */,
+/* 201 */,
+/* 202 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _from = __webpack_require__(203);
+
+var _from2 = _interopRequireDefault(_from);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = function (arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
+    }
+
+    return arr2;
+  } else {
+    return (0, _from2.default)(arr);
+  }
+};
+
+/***/ }),
+/* 203 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(204), __esModule: true };
+
+/***/ }),
+/* 204 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(44);
+__webpack_require__(205);
+module.exports = __webpack_require__(0).Array.from;
+
+
+/***/ }),
+/* 205 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var ctx = __webpack_require__(35);
+var $export = __webpack_require__(2);
+var toObject = __webpack_require__(20);
+var call = __webpack_require__(206);
+var isArrayIter = __webpack_require__(207);
+var toLength = __webpack_require__(79);
+var createProperty = __webpack_require__(208);
+var getIterFn = __webpack_require__(146);
+
+$export($export.S + $export.F * !__webpack_require__(209)(function (iter) { Array.from(iter); }), 'Array', {
+  // 22.1.2.1 Array.from(arrayLike, mapfn = undefined, thisArg = undefined)
+  from: function from(arrayLike /* , mapfn = undefined, thisArg = undefined */) {
+    var O = toObject(arrayLike);
+    var C = typeof this == 'function' ? this : Array;
+    var aLen = arguments.length;
+    var mapfn = aLen > 1 ? arguments[1] : undefined;
+    var mapping = mapfn !== undefined;
+    var index = 0;
+    var iterFn = getIterFn(O);
+    var length, result, step, iterator;
+    if (mapping) mapfn = ctx(mapfn, aLen > 2 ? arguments[2] : undefined, 2);
+    // if object isn't iterable or it's array with default iterator - use simple case
+    if (iterFn != undefined && !(C == Array && isArrayIter(iterFn))) {
+      for (iterator = iterFn.call(O), result = new C(); !(step = iterator.next()).done; index++) {
+        createProperty(result, index, mapping ? call(iterator, mapfn, [step.value, index], true) : step.value);
+      }
+    } else {
+      length = toLength(O.length);
+      for (result = new C(length); length > index; index++) {
+        createProperty(result, index, mapping ? mapfn(O[index], index) : O[index]);
+      }
+    }
+    result.length = index;
+    return result;
+  }
+});
+
+
+/***/ }),
+/* 206 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// call something on iterator step with safe closing on error
+var anObject = __webpack_require__(11);
+module.exports = function (iterator, fn, value, entries) {
+  try {
+    return entries ? fn(anObject(value)[0], value[1]) : fn(value);
+  // 7.4.6 IteratorClose(iterator, completion)
+  } catch (e) {
+    var ret = iterator['return'];
+    if (ret !== undefined) anObject(ret.call(iterator));
+    throw e;
+  }
+};
+
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// check on default Array iterator
+var Iterators = __webpack_require__(17);
+var ITERATOR = __webpack_require__(5)('iterator');
+var ArrayProto = Array.prototype;
+
+module.exports = function (it) {
+  return it !== undefined && (Iterators.Array === it || ArrayProto[ITERATOR] === it);
+};
+
+
+/***/ }),
+/* 208 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+var $defineProperty = __webpack_require__(6);
+var createDesc = __webpack_require__(13);
+
+module.exports = function (object, index, value) {
+  if (index in object) $defineProperty.f(object, index, createDesc(0, value));
+  else object[index] = value;
+};
+
+
+/***/ }),
+/* 209 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var ITERATOR = __webpack_require__(5)('iterator');
+var SAFE_CLOSING = false;
+
+try {
+  var riter = [7][ITERATOR]();
+  riter['return'] = function () { SAFE_CLOSING = true; };
+  // eslint-disable-next-line no-throw-literal
+  Array.from(riter, function () { throw 2; });
+} catch (e) { /* empty */ }
+
+module.exports = function (exec, skipClosing) {
+  if (!skipClosing && !SAFE_CLOSING) return false;
+  var safe = false;
+  try {
+    var arr = [7];
+    var iter = arr[ITERATOR]();
+    iter.next = function () { return { done: safe = true }; };
+    arr[ITERATOR] = function () { return iter; };
+    exec(arr);
+  } catch (e) { /* empty */ }
+  return safe;
+};
+
 
 /***/ })
 /******/ ]);

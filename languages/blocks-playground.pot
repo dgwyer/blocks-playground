@@ -131,6 +131,16 @@ msgstr ""
 msgid "Frequently Asked Questions"
 msgstr ""
 
+#: src/faqs/index.js:74
+#: src/faqs/index.js:72
+#: src/faqs/index.js:73
+#: src/faqs/index.js:75
+#: src/faqs/index.js:80
+#: src/faqs/index.js:79
+#: src/faqs/index.js:78
+#: src/faqs/index.js:77
+#: src/faqs/index.js:76
+#: src/faqs/index.js:58
 #: src/faqs/index.js:56
 #: src/shortcode/index.js:66
 msgid "General Settings"

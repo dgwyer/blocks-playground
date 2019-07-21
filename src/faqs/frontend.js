@@ -16,6 +16,9 @@ console.log('FlexibleFaq: ', FlexibleFaq);
 
 ffaq_els.forEach((ffaq_el, index) => {
   const ffaq_id = ffaq_el.id;
+
+  console.log('ATTRIBUTES: ', window[ffaq_id]);
+
   //const direction = gallery.dataset.direction;
   // const islightboxenabled = gallery.dataset.islightboxenabled;
   // const images = gallery.querySelectorAll("img");
@@ -34,7 +37,7 @@ ffaq_els.forEach((ffaq_el, index) => {
   // });
 
   render(
-    <FlexibleFaq />,
+    <FlexibleFaq some_array={window[ffaq_id].some_array} />,
     ffaq_el //document.querySelector('.ffaq-container')
   );  
 });

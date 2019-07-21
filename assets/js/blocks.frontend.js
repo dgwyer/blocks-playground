@@ -2316,7 +2316,7 @@ var createCache = function createCache(options) {
 
 
 
-var _templateObject = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_taggedTemplateLiteral___default()(["\n          background-color: ", ";\n          color: #fff;\n          \n        "], ["\n          background-color: ", ";\n          color: #fff;\n          \n        "]);
+var _templateObject = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_taggedTemplateLiteral___default()(["\n          background-color: ", ";\n          color: #fff;\n          padding: ", "\n        "], ["\n          background-color: ", ";\n          color: #fff;\n          padding: ", "\n        "]);
 
 /** @jsx jsx */
 //  Import core block libraries
@@ -2359,21 +2359,21 @@ var FlexibleFaq = function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
 
-      console.log('Loaded!');
+      console.log('FlexibleFaq component mounted');
 
       //   // render dropdowns
     }
   }, {
     key: "render",
     value: function render() {
-      var block_taxonomy = this.props.block_taxonomy;
+      var some_array = this.props.some_array;
 
       var bg = "pink";
 
       return Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
         "div",
         {
-          css: Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["c" /* css */])(_templateObject, bg)
+          css: Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["c" /* css */])(_templateObject, bg, some_array[0])
         },
         "I am an FAQ!"
       );
@@ -4060,6 +4060,9 @@ console.log('FlexibleFaq: ', __WEBPACK_IMPORTED_MODULE_0__components_FlexibleFaq
 
 ffaq_els.forEach(function (ffaq_el, index) {
   var ffaq_id = ffaq_el.id;
+
+  console.log('ATTRIBUTES: ', window[ffaq_id]);
+
   //const direction = gallery.dataset.direction;
   // const islightboxenabled = gallery.dataset.islightboxenabled;
   // const images = gallery.querySelectorAll("img");
@@ -4077,7 +4080,7 @@ ffaq_els.forEach(function (ffaq_el, index) {
   //   });
   // });
 
-  render(wp.element.createElement(__WEBPACK_IMPORTED_MODULE_0__components_FlexibleFaq__["a" /* default */], null), ffaq_el //document.querySelector('.ffaq-container')
+  render(wp.element.createElement(__WEBPACK_IMPORTED_MODULE_0__components_FlexibleFaq__["a" /* default */], { some_array: window[ffaq_id].some_array }), ffaq_el //document.querySelector('.ffaq-container')
   );
 });
 

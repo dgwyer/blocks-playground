@@ -28,13 +28,13 @@ export default class FlexibleFaq extends React.Component {
   // get post types to populate select box
   componentDidMount() {
     
-    console.log('Loaded!');
+    console.log('FlexibleFaq component mounted');
 
   //   // render dropdowns
   }
 
   render() {
-    const { block_taxonomy } = this.props;
+    const { some_array } = this.props;
     const bg = "pink";
 
     return (
@@ -42,7 +42,7 @@ export default class FlexibleFaq extends React.Component {
         css={css`
           background-color: ${bg};
           color: #fff;
-          
+          padding: ${some_array[0]}
         `}
       >
         I am an FAQ!
