@@ -11,10 +11,12 @@ const { Fragment } = wp.element;
 const { registerBlockType, getBlockAttributes } = wp.blocks;
 const {
   BlockControls,
-  InspectorControls,
   MediaUpload,
   MediaPlaceholder
 } = wp.editor;
+const {
+  InspectorControls
+} = wp.blockEditor;
 const {
   IconButton,
   Toolbar,
@@ -45,9 +47,9 @@ export default registerBlockType("blocks-playground/faqs", {
   edit: props => {
 
     const {
-      attributes: { page_depth, q_padding, some_array },
+      attributes: { page_depth, q_padding, some_array, test_asc_array, faq_styles },
       className,
-      setAttributes
+      setAttributes, attributes
     } = props;
 
     function updatePadding(padding) {
@@ -66,7 +68,31 @@ export default registerBlockType("blocks-playground/faqs", {
       setAttributes({ some_array: newColors });
     }
 
-    console.log('some_array: ', some_array);
+    function updatePaddingTest(padding) {
+
+      // @todo this should be a prop or come from PHP?
+      //var styleIndex = 0;
+
+//      console.log('TEST New padding: ', test_asc_array);
+
+      console.log('STYLES (before update): ', JSON.parse(faq_styles));
+
+      //(value) => setState({ color: value.hex })
+
+      // it's registered in PHP as an array but we access it in JS in object form!
+      let newStyles = {
+        ...JSON.parse(faq_styles)[0],
+        padding: padding
+      };
+
+      console.log('STYLES (after update): ', newStyles);
+      console.log('STYLES STRING (after update): ', '[' + JSON.stringify(newStyles) + ']' );
+      console.log('STYLES ORIGIN: ', faq_styles );
+
+      setAttributes({ faq_styles: '[' + JSON.stringify(newStyles) + ']' });
+//      newColors[styleIndex] = padding;
+//      console.log('NEW STYLES: ', JSON.stringify(newStyles));
+    }
 
     return (
       <Fragment>
@@ -92,13 +118,24 @@ export default registerBlockType("blocks-playground/faqs", {
                 onChange={updatePadding}
               />
             </PanelRow>
+            <PanelRow>
+              <TextControl
+                type="string"
+                label="TEST Q Padding"
+                help="Padding for the question"
+                value={JSON.parse(faq_styles)[0].padding}
+                onChange={updatePaddingTest}
+              />
+            </PanelRow>
           </PanelBody>
         </InspectorControls>
         <div className='ffaq'>
           {page_depth}
-          {JSON.stringify(props.attributes)}
+          <br />
+          {JSON.stringify(props.attributes.test_asc_array.padding)}
+          <br />
           Flexible FAQ Container
-          <FlexibleFaq some_array={some_array} />, />
+          <FlexibleFaq padding={JSON.parse(faq_styles)[0].padding} />
         </div>
       </Fragment>
     );

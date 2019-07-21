@@ -20,6 +20,16 @@ function register_dynamic_block() {
 				'type'    => 'string',
 				'default' => 'default string'
 			],
+			'test_asc_array'  => [
+				'type'  => 'array',
+				'items' => [
+						'type' => 'string'
+				],
+				'default' => [
+					'padding' => '9px',
+					'margin' => '1px'
+				]
+			],
 			'some_array'  => [
 				'type'  => 'array',
 				'items' => [
@@ -39,8 +49,8 @@ function register_dynamic_block() {
 				'default' => '0'
 			],
 			'faq_styles' => [
-				'type'    => 'object',
-				'default' => '0'
+				'type'    => 'string',
+				'default' => '[{ "padding": "14px", "margin": "15px" }]'
 			],
 			'faq_posts'  => [
 					'type'  => 'string',
@@ -60,7 +70,8 @@ function render_dynamic_block($attr) {
 		'id' => uniqid(), // unique identifier to avoid conflicts if using multiple faqs on the same page. e.g. 5d026c6168954
 		'page_depth' => 0,
 		'q_padding' => '0',
-		'some_array' => []
+		'some_array' => [],
+		'faq_styles' => ''
 
 		// following attributes don't have block support yet
 
@@ -72,6 +83,7 @@ function render_dynamic_block($attr) {
 	//$args['page_depth'] = tag_escape( $args['container_tag'] );
 	$args['q_padding'] = esc_attr( $args['q_padding'] );
 	$args['some_array'] = json_encode($args['some_array']); // convert PHP attribute to JS array
+	$args['faq_styles'] = json_encode($args['faq_styles']);
 
 	// Start output buffering (so that existing content in the [simple-sitemap] post doesn't get shoved to the bottom of the post
 	ob_start();
@@ -85,10 +97,11 @@ function render_dynamic_block($attr) {
 		var ffaq_{$args['id']} = {
 			page_depth: {$args['page_depth']},
 			q_padding: '{$args['q_padding']}',
-			some_array: {$args['some_array']}
+			some_array: {$args['some_array']},
+			faq_styles: {$args['faq_styles']},
 		};
-		console.log('Hello there!', ffaq_{$args['id']});
-		console.log( 'ARRSTR: ', {$args['some_array']} );
+		//console.log('Hello there!', ffaq_{$args['id']});
+		//console.log( 'ARRSTR: ', {$args['some_array']} );
 	</script>
 	JS;
 	$faqJS = trim(preg_replace('/\s+/', ' ', $faqJS));

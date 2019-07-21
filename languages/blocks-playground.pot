@@ -110,40 +110,33 @@ msgstr ""
 msgid "No Posts"
 msgstr ""
 
-#: src/faqs/index.js:33
+#: src/faqs/index.js:100
+#: src/faqs/index.js:99
+#: src/faqs/index.js:101
+#: src/faqs/index.js:98
+#: src/shortcode/index.js:66
+msgid "General Settings"
+msgstr ""
+
+#: src/faqs/index.js:35
 msgid "FAQs (NEW)"
 msgstr ""
 
-#: src/faqs/index.js:34
+#: src/faqs/index.js:36
 msgid "FAQs rendered via React on frontend"
 msgstr ""
 
-#: src/faqs/index.js:38
+#: src/faqs/index.js:40
 #: src/faqs1/index.js:28
 msgid "FAQs"
 msgstr ""
 
-#: src/faqs/index.js:39
+#: src/faqs/index.js:41
 msgid "WPGO"
 msgstr ""
 
-#: src/faqs/index.js:40
+#: src/faqs/index.js:42
 msgid "Frequently Asked Questions"
-msgstr ""
-
-#: src/faqs/index.js:74
-#: src/faqs/index.js:72
-#: src/faqs/index.js:73
-#: src/faqs/index.js:75
-#: src/faqs/index.js:80
-#: src/faqs/index.js:79
-#: src/faqs/index.js:78
-#: src/faqs/index.js:77
-#: src/faqs/index.js:76
-#: src/faqs/index.js:58
-#: src/faqs/index.js:56
-#: src/shortcode/index.js:66
-msgid "General Settings"
 msgstr ""
 
 #: src/faqs1/index.js:29

@@ -34,7 +34,7 @@ export default class FlexibleFaq extends React.Component {
   }
 
   render() {
-    const { some_array } = this.props;
+    const { padding } = this.props;
     const bg = "pink";
 
     return (
@@ -42,7 +42,7 @@ export default class FlexibleFaq extends React.Component {
         css={css`
           background-color: ${bg};
           color: #fff;
-          padding: ${some_array[0]}
+          padding: ${padding}
         `}
       >
         I am an FAQ!

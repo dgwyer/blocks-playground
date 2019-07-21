@@ -11,13 +11,14 @@ function Welcome(props) {
   //return <FlexibleFaq />;
 }
 
-console.log('ffaq_els: ', ffaq_els);
-console.log('FlexibleFaq: ', FlexibleFaq);
+//console.log('ffaq_els: ', ffaq_els);
+//console.log('FlexibleFaq: ', FlexibleFaq);
 
 ffaq_els.forEach((ffaq_el, index) => {
   const ffaq_id = ffaq_el.id;
 
   console.log('ATTRIBUTES: ', window[ffaq_id]);
+  console.log('FAQ STYLES: ', JSON.parse(window[ffaq_id].faq_styles)[0].padding);
 
   //const direction = gallery.dataset.direction;
   // const islightboxenabled = gallery.dataset.islightboxenabled;
@@ -37,7 +38,7 @@ ffaq_els.forEach((ffaq_el, index) => {
   // });
 
   render(
-    <FlexibleFaq some_array={window[ffaq_id].some_array} />,
+    <FlexibleFaq padding={JSON.parse(window[ffaq_id].faq_styles)[0].padding} />,
     ffaq_el //document.querySelector('.ffaq-container')
   );  
 });
