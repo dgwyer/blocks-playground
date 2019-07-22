@@ -2705,7 +2705,7 @@ module.exports = document && document.documentElement;
 
 
 
-var _templateObject = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_taggedTemplateLiteral___default()(["\n          background-color: ", ";\n          color: #fff;\n          padding: ", "\n        "], ["\n          background-color: ", ";\n          color: #fff;\n          padding: ", "\n        "]);
+var _templateObject = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_taggedTemplateLiteral___default()(["\n      background-color: ", ";\n      color: #fff;\n      padding: ", "\n    "], ["\n      background-color: ", ";\n      color: #fff;\n      padding: ", "\n    "]);
 
 /** @jsx jsx */
 //  Import core block libraries
@@ -2757,14 +2757,13 @@ var FlexibleFaq = function (_React$Component) {
     value: function render() {
       var padding = this.props.padding;
 
-      var bg = "pink";
+      var bg = "green";
+      var taggy = Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["c" /* css */])(_templateObject, bg, padding);
 
       return Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
         "div",
-        {
-          css: Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["c" /* css */])(_templateObject, bg, padding)
-        },
-        "I am an FAQ!"
+        { css: taggy },
+        "I'm an FAQ!"
       );
     }
   }]);

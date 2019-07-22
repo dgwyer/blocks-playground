@@ -27,25 +27,24 @@ export default class FlexibleFaq extends React.Component {
 
   // get post types to populate select box
   componentDidMount() {
-    
+
     console.log('FlexibleFaq component mounted');
 
-  //   // render dropdowns
+    //   // render dropdowns
   }
 
   render() {
     const { padding } = this.props;
-    const bg = "pink";
+    const bg = "green";
+    const taggy = css`
+      background-color: ${bg};
+      color: #fff;
+      padding: ${padding}
+    `;
 
     return (
-      <div
-        css={css`
-          background-color: ${bg};
-          color: #fff;
-          padding: ${padding}
-        `}
-      >
-        I am an FAQ!
+      <div css={taggy}>
+        I'm an FAQ!
       </div>
     );
   }
