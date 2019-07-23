@@ -8,6 +8,7 @@
 // } = wp.components;
 //const { Component, Fragment } = wp.element;
 import { css, jsx } from "@emotion/core";
+//import { faqStyles } from './dynamicFaqStyles';
 
 // render a single faq
 export default class FlexibleFaq extends React.Component {
@@ -29,11 +30,12 @@ export default class FlexibleFaq extends React.Component {
   componentDidMount() {
 
     console.log('FlexibleFaq component mounted');
-
-    //   // render dropdowns
+    // render dropdowns
   }
 
   render() {
+ 
+    // @todoAdd these to separate file
     const { padding } = this.props;
     const bg = "green";
     const taggy = css`
@@ -43,8 +45,26 @@ export default class FlexibleFaq extends React.Component {
     `;
 
     return (
-      <div css={taggy}>
-        I'm an FAQ!
+      <div>
+
+        <div css={taggy}>
+          I'm an FAQ!
+        </div>
+
+        <div className="flexible-faq-wrapper faq1">
+          <div className="faq-question flexible-faq">
+            <div className="faq-inner-question right">
+              <span className="question-text">Why should I use Flexible FAQs?</span>
+              <span class="faq-question-expand">X</span>
+            </div>
+          </div>
+          <div className="faq-answer flexible-faq">
+            <div className="faq-inner-answer">
+              <p>Flexible FAQs was specifically created to make managing multiple FAQs as easy as possible.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
     );
   }

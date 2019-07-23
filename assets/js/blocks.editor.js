@@ -2717,6 +2717,7 @@ var _templateObject = __WEBPACK_IMPORTED_MODULE_0_babel_runtime_helpers_taggedTe
 // } = wp.components;
 //const { Component, Fragment } = wp.element;
 
+//import { faqStyles } from './dynamicFaqStyles';
 
 // render a single faq
 
@@ -2749,12 +2750,13 @@ var FlexibleFaq = function (_React$Component) {
     value: function componentDidMount() {
 
       console.log('FlexibleFaq component mounted');
-
-      //   // render dropdowns
+      // render dropdowns
     }
   }, {
     key: "render",
     value: function render() {
+
+      // @todoAdd these to separate file
       var padding = this.props.padding;
 
       var bg = "green";
@@ -2762,8 +2764,47 @@ var FlexibleFaq = function (_React$Component) {
 
       return Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
         "div",
-        { css: taggy },
-        "I'm an FAQ!"
+        null,
+        Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+          "div",
+          { css: taggy },
+          "I'm an FAQ!"
+        ),
+        Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+          "div",
+          { className: "flexible-faq-wrapper faq1" },
+          Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+            "div",
+            { className: "faq-question flexible-faq" },
+            Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+              "div",
+              { className: "faq-inner-question right" },
+              Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+                "span",
+                { className: "question-text" },
+                "Why should I use Flexible FAQs?"
+              ),
+              Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+                "span",
+                { "class": "faq-question-expand" },
+                "X"
+              )
+            )
+          ),
+          Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+            "div",
+            { className: "faq-answer flexible-faq" },
+            Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+              "div",
+              { className: "faq-inner-answer" },
+              Object(__WEBPACK_IMPORTED_MODULE_6__emotion_core__["d" /* jsx */])(
+                "p",
+                null,
+                "Flexible FAQs was specifically created to make managing multiple FAQs as easy as possible."
+              )
+            )
+          )
+        )
       );
     }
   }]);

@@ -111,9 +111,6 @@ msgid "No Posts"
 msgstr ""
 
 #: src/faqs/index.js:100
-#: src/faqs/index.js:99
-#: src/faqs/index.js:101
-#: src/faqs/index.js:98
 #: src/shortcode/index.js:66
 msgid "General Settings"
 msgstr ""
